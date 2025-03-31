@@ -1,0 +1,521 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('@vueup/vue-quill/dist/vue-quill.snow.css');
+@import url('@vueup/vue-quill/dist/vue-quill.bubble.css');
+
+:root {
+	--color-primary: #222; 				/* 메인 컬러 */
+	--color-primary-contrast: #fff; 		/* 메인 컬러 콘트라스트 */
+
+	/* 포인트 컬러가 다수일 경우 아래와 같이 변수명 끝에 컬러를 추가하여 활용 */
+	--color-point-green: #BEECB3;			/* 포인트 컬러 초록 */
+	--color-point-red: #FA9A9A;			/* 포인트 컬러 빨강 */
+	--color-point-blue: #A4D3FF;			/* 포인트 컬러 파랑 */
+	--color-point-purple: #D99CFF;			/* 포인트 컬러 노랑 */
+
+	--color-font-default: #222;			/* 기본 폰트 컬러 */
+	--color-font-contrast: #fff;			/* 기본 폰트 컬러 콘트라스트 */
+	--color-font-lighter: #bbb;			/* 더 밝은 폰트 컬러 */
+	--color-font-light: #888;				/* 밝은 폰트 컬러 */
+	--color-font-mid: #555;				/* 중간 폰트 컬러 */
+	--color-font-dark: #333;				/* 어두운 폰트 컬러 */
+	--color-font-placeholder: #bbb;		/* placeholder 컬러 */
+
+	--color-base-brand: #F2F5FA;			/* 브랜드 베이스 컬러 */
+	--color-base-light: #f5f5f5;			/* 밝은 베이스 컬러 */
+	--color-base-mid: #eee;				/* 중간 베이스 컬러 */
+	--color-base-dark: #888;				/* 어두운 베이스 컬러 */
+	--color-base-white: #fff;	
+
+	--color-border-light: #eee;			/* 밝은 테두리 컬러 */
+	--color-border-mid: #e5e5e5; 				/* 중간 테두리 컬러 */
+	--color-border-dark: #555; 			/* 어두운 테두리 컬러 */
+
+	--color-disabled: #b2b1ad; 			/* 비활성화 색 */
+	--color-active: #28a745; 				/* 활성화 색 */
+	--color-danger: #c8190c; 				/* 경고 색 */
+	--color-alert: #ffa500; 				/* 알림 색 */
+
+	--color-main-banner: #f7f8fa;
+
+	--background-opacity: rgba(0, 0, 0, 0.7); /* 호버 효과 등의 옅은 배경 */
+
+
+	/* 폰트 */
+	--font-s-xx-small: 1.1rem;
+	--font-s-x-small: 1.2rem;
+	--font-s-small: 1.4rem;
+	--font-s-mid: 1.6rem;
+	--font-s-large: 1.9rem;
+	--font-s-x-large: 2.1rem;
+	--font-s-xx-large: 2.7rem;
+	--font-s-xxx-large: 3.2rem;
+
+	--font-w-thin: 100;
+	--font-w-light: 300;
+	--font-w-regular: 400;
+	--font-w-mid: 500;
+	--font-w-bold: 700;
+	--font-w-black: 900;
+
+	--line-height: 1.6;
+
+	/* 레디우스 */
+	--border-radius-small: .4rem;			/* 레디우스 크기 조정 (소) */
+	--border-radius-mid: .8rem;				/* 레디우스 크기 조정 (중) */
+	--border-radius-large: 1.6rem;			/* 레디우스 크기 조정 (대) */
+	--border-radius-x-large: 2.4rem;		/* 레디우스 크기 조정 (대) */
+	--border-radius-full: 100rem;			/* 레디우스 크기 조정 (100%) */
+
+	/* 여백 */
+	--space-x-small: 0.4rem;
+	--space-small: 0.8rem;
+	--space-mid: 1.6rem;
+	--space-large: 2.4rem;
+	--space-x-large: 3.2rem;
+	--space-xx-large: 4.0rem;
+	--space-xxx-large: 4.8rem;
+
+	/* transition 속도 */
+	--transition-fast: 0.12s;
+	--transition-default: 0.2s;
+	--transition-slow: 0.3s;
+	--transition-slower: 0.5s;
+
+	/* 기타 */
+	--box-shadow: 0.2rem 0.2rem var(--size-shadow) rgba(0, 0, 0, 0.1);						/* 기본 박스 그림자 */
+	--box-shadow-press: inset 0.2rem 0.2rem var(--size-shadow-inner) rgba(0, 0, 0, 0.2);	/* 기본 박스 그림자(inner) */
+	/* 그림자 잘리는 현상을 방지하기 위해 추가되는 패딩값에 아래 변수를 선언하면 그림자 크기만큼 패딩값이 연동되어 수월하게 수정이 가능  */
+	--size-shadow: 0.6rem;			/* 그림자 크기 */
+	--size-shadow-inner: 1rem;		/* 그림자 크기(inner) */
+
+	/* 계산 목적 변수 */
+	--header-height: 6rem;
+	--bottom-height: 8rem;
+	--common-height: 4.8rem;
+	--min-width: 250px;
+	--inner-width: 1200px;
+	--dynamic-size: 6rem;
+	--arrow-size: 1.2rem;
+	--select-size: calc(var(--dynamic-size) + var(--arrow-size));
+
+	--banner-image: url('~@/assets/image/common/img_mainBanner-light.jpg');
+}
+
+:root[data-theme="dark"] {
+	--color-primary: #fff; 				/* 메인 컬러 */
+	--color-primary-contrast: #222; 		/* 메인 컬러 콘트라스트 */
+
+	/* 포인트 컬러가 다수일 경우 아래와 같이 변수명 끝에 컬러를 추가하여 활용 */
+	--color-point-green: #BEECB3;			/* 포인트 컬러 초록 */
+	--color-point-red: #FA9A9A;			/* 포인트 컬러 빨강 */
+	--color-point-blue: #A4D3FF;			/* 포인트 컬러 파랑 */
+	--color-point-purple: #D99CFF;			/* 포인트 컬러 노랑 */
+
+	--color-font-default: #fff;			/* 기본 폰트 컬러 */
+	--color-font-contrast: #222;			/* 기본 폰트 컬러 콘트라스트 */
+	--color-font-lighter: #bbb;			/* 더 밝은 폰트 컬러 */
+	--color-font-light: #888;				/* 밝은 폰트 컬러 */
+	--color-font-mid: #ddd;				/* 중간 폰트 컬러 */
+	--color-font-dark: #fff;				/* 어두운 폰트 컬러 */
+	--color-font-placeholder: #bbb;		/* placeholder 컬러 */
+
+	--color-base-brand: #F2F5FA;			/* 브랜드 베이스 컬러 */
+	--color-base-light: #f5f5f5;			/* 밝은 베이스 컬러 */
+	--color-base-mid: #eee;				/* 중간 베이스 컬러 */
+	--color-base-dark: #888;				/* 어두운 베이스 컬러 */
+	--color-base-white: #0b0b0b;	
+
+	--color-border-light: #444;			/* 밝은 테두리 컬러 */
+	--color-border-mid: #e5e5e5; 				/* 중간 테두리 컬러 */
+	--color-border-dark: #ddd; 			/* 어두운 테두리 컬러 */
+
+	--color-disabled: #b2b1ad; 			/* 비활성화 색 */
+	--color-active: #28a745; 				/* 활성화 색 */
+	--color-danger: #c8190c; 				/* 경고 색 */
+	--color-alert: #ffa500; 				/* 알림 색 */
+
+	--color-main-banner: #0b0b0b;
+
+	--banner-image: url('~@/assets/image/common/img_mainBanner-dark.jpg');
+}
+
+/* ---------- 기본 set START ---------- */
+/* 드래그시 색깔 */
+/* ::selection{
+    background-color: lightblue;
+    color:var(--font-color-default);
+} */
+/* 크롬에서 자동완성 배경 하얀색으로 */
+/* input:-webkit-autofill,
+textarea:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 100rem #fff inset !important;
+} */
+/* 웹폰트 깨짐 방지 */
+/* p,
+span,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+tr,
+td,
+figure,
+blockquote {
+	transform: skew(0.1deg);
+	margin: 0 !important;
+} */
+html {
+	font-family: 'Pretendard';
+	font-size: 10px;
+	/*scroll-behavior: smooth;*/
+}
+body {
+	/* max-width: var(--inner); */
+	font-family: 'Pretendard';
+	font-size: var(--font-s-mid);
+	font-weight: var(--font-w-regular);
+	line-height: var(--line-height);
+	letter-spacing: -0.03rem;
+	color: var(--color-font-default);
+}
+strong {
+	font-weight: var(--font-w-bold);
+}
+i {
+	font-style: italic;
+}
+em {
+	font-style: italic;
+}
+blockquote::before {
+	content: '\201C';
+}
+blockquote::after {
+	content: '\201D';
+}
+img {
+	width: 100%;
+	/* image-rendering: crisp-edges; */
+}
+button {
+	padding: 0.5em 1em;
+	background-color: transparent;
+	outline: none;
+}
+button,
+a {
+	color: initial;
+	user-select: none;
+}
+input,
+progress {
+	accent-color: var(--color-primary);
+}
+input,
+textarea,
+select {
+	width: 100%;
+	border: 1px solid var(--color-border-mid);
+	border-radius: var(--border-radius-small);
+	/* background-color: transparent; */
+	/* background-color: var(--color-base-highlight); */
+}
+input[type='text'],
+input[type='date'],
+select {
+	height: 4.8rem;
+}
+input:focus,
+textarea:focus,
+select:focus {
+	outline-color: var(--color-primary);
+}
+input[type='checkbox'],
+input[type='radio'] {
+	outline: none;
+	appearance: none;
+}
+input::placeholder,
+textarea::placeholder {
+	color: var(--color-font-placeholder);
+}
+textarea {
+	resize: none;
+}
+input[type='search'] {
+	-webkit-appearance: textfield;
+}
+input::-ms-clear,
+input::-ms-reveal {
+	display: none;
+	width: 0;
+	height: 0;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+	display: none;
+}
+select {
+	/* background: url("~@/assets/image/common/expand_more.svg") calc(100% - 0.8em) center no-repeat; */
+	background-size: 1.6rem;
+	-o-appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+select::-ms-expand {
+	display: none;
+}
+select option[value=''] {
+	color: var(--color-font-placeholder);
+}
+input[type='checkbox'] {
+}
+input[type='checkbox'] {
+	/* display: none; */
+}
+input[type='checkbox'] + label {
+}
+input[type='checkbox']:checked + label {
+}
+/* ----------- 기본 set END ----------- */
+
+/* ------------ style START ------------ */
+
+/* layout style START */
+.c_contents_container {
+	width: 100%;
+	background-color:  var(--color-base-white);
+	transition-duration: 0.3s;
+}
+[class*='c_section'] {
+	width: 100%;
+	background-color:  var(--color-base-white);
+	transition-duration: 0.3s;
+	/* padding: 0 2rem; */
+	/* box-sizing: border-box; */
+}
+[class*='c_section']+[class*='c_section']{
+	margin-top: var(--space-xx-large);
+}
+
+[class*='c_inner'] {
+	position: relative;
+	width: 90%;
+	height: auto;
+	max-width:Var(--inner-width);
+	padding:Var(--space-xxx-large) 0;
+	margin:0 auto;
+}
+/* [class*='c_inner'] [class*='container']+[class*='container']{
+	margin-top: var(--space-x-large);
+} */
+/* layout style END */
+
+/* util성 css 시작 */
+@media screen and (max-width: 600px) {
+	.webOnly {
+		/* 모바일에서 숨김 */
+		display: none;
+	}
+}
+@media screen and (min-width: 601px) {
+	.mobileOnly {
+		/* 웹에서 숨김 */
+		display: none;
+	}
+}
+.c_screen_filter {
+	/* [기능] 팝업 등의 배경 가릴 filter */
+	/* display: none; */
+	z-index: 90;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.c_loading {
+	/* [기능] 로딩 스타일 */
+	position: relative;
+	min-height: 15rem;
+}
+.c_loading::before {
+	content: '';
+	z-index: 100;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: var(--background-effect);
+	opacity: 0.65;
+}
+.c_loading::after {
+	content: '';
+	z-index: 100;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 3rem;
+	height: 3rem;
+	margin-top: -2rem;
+	margin-left: -1.5rem;
+	border-radius: 50%;
+	border: 5px solid var(--color-border-default);
+	border-top-color: var(--color-primary);
+	animation: c_spining 0.7s ease-in-out infinite;
+}
+
+/* c_details START */
+details summary::marker,
+details summary::-webkit-details-marker {
+	font-size: 0;
+	display: none;
+}
+details summary .icon_wrap {
+	width: 1.2rem;
+	height: 1.2rem;
+	transition-duration: 0.3s;
+}
+details[open] summary .icon_wrap {
+	transform: rotate(-180deg);
+}
+.c_details .c_summary {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 6rem;
+    cursor:pointer;
+}
+/* c_details END */
+
+/* util성 css 끝 */
+/* c_details START */
+details summary::marker,
+details summary::-webkit-details-marker {
+	font-size: 0;
+	display: none;
+}
+details summary .icon_wrap {
+	width: 1.2rem;
+	height: 1.2rem;
+	transition-duration: 0.3s;
+}
+details[open] summary .icon_wrap {
+	transform: rotate(-180deg);
+}
+.c_details .c_summary {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 6rem;
+    cursor:pointer;
+}
+/* c_details END */
+/* util성 css 끝 */
+
+/* font-class START */
+.headline {
+	font-size: var(--font-s-xx-large);
+	font-weight: var(--font-w-mid);
+	line-height: 32.5px;
+	letter-spacing: -0.05rem;
+}
+.title1 {
+	font-size: var(--font-s-large);
+	font-weight: var(--font-w-mid);
+	line-height: 24.5px;
+}
+.title2 {
+	font-size: var(--font-s-mid);
+	font-weight: var(--font-w-mid);
+	line-height: 22px;
+}
+.articleBody {
+	font-size: var(--font-s-mid);
+	font-weight: var(--font-w-regular);
+	line-height: 22px;
+}
+.subtitle1 {
+	font-size: var(--font-s-mid);
+	font-weight: var(--font-w-mid);
+	line-height: 19.5px;
+}
+.body1 {
+	font-size: var(--font-s-mid);
+	font-weight: var(--font-w-regular);
+	line-height: 19.5px;
+}
+.subtitle2 {
+	font-size: var(--font-s-small);
+	font-weight: var(--font-w-mid);
+	line-height: 17px;
+}
+.body2 {
+	font-size: var(--font-s-small);
+	font-weight: var(--font-w-regular);
+	line-height: 17px;
+}
+/* font-class END */
+
+
+@media screen and (min-width:769px){
+	.mobileOnly{
+		display:none;
+	}
+}
+/* ------------ style END ------------ */
+
+/* ---------- animation START  ---------- */
+@keyframes c_spining {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+/* ---------- animation END  ---------- */
+
+
+
+/* ---------- font-size START  ---------- */
+@media only screen and (max-width: 319px) {
+	html {
+		font-size: 8px;
+	}
+}
+@media only screen and (max-width: 374px) {
+	html {
+		font-size: 9px;
+	}
+}
+/* iPad 가로 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+	html {
+		font-size: 10px;
+	}
+}
+/* iPad 세로 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+	html {
+		font-size: 10px;
+	}
+}
+/* iPad pro 가로 */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) {
+	html {
+		font-size: 10px;
+	}
+}
+/* iPad pro 세로 */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
+	html {
+		font-size: 10px;
+	}
+}
+/* ---------- font-size END  ---------- */

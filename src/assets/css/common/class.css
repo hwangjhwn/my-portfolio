@@ -1,0 +1,255 @@
+/* 스타일을 추가할 수 있는 클래스들을 정리 */
+
+/* position */
+.position-relative {
+	position: relative;
+}
+.position-absolute {
+	position: absolute;
+}
+.position-fixed {
+}
+
+/* flex */
+.flex-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--space-mid);
+	width: 100%;
+}
+.flex-row-start {
+	display: flex;
+	align-items: center;
+	/* align-items: flex-start; */
+	justify-content: flex-start !important;
+	gap: var(--space-mid);
+	width: 100%;
+}
+.flex-row-end {
+	display: flex;
+	align-items: center;
+	/* align-items: flex-start; */
+	justify-content: flex-end !important;
+	gap: var(--space-mid);
+	width: 100%;
+}
+.flex-row-baseline {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: var(--space-mid);
+	width: 100%;
+}
+.flex-row-stretch {
+	display: flex;
+	align-items: stretch;
+	justify-content: space-between;
+	gap: var(--space-mid);
+	width: 100%;
+}
+.flex-column {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-mid);
+	width: 100%;
+}
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.flex-space-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.gap-small {
+	gap: var(--space-small) !important;
+}
+.gap-mid {
+	gap: var(--space-mid);
+}
+.gap-large {
+	gap: var(--space-large);
+}
+.gap-none {
+	gap: 0 !important;
+}
+.shrink-none {
+	flex-shrink: 0;
+}
+.align-end {
+	align-items: flex-end;
+}
+.height-full {
+	height: 100%;
+}
+
+/* margin */
+.margin-top-s-small {
+	margin-top: 0.4rem;
+}
+.margin-top-small {
+	margin-top: var(--space-small);
+}
+.margin-top-mid {
+	margin-top: var(--space-mid);
+}
+.margin-top-large {
+	margin-top: var(--space-large);
+}
+.margin-top-large-auto {
+	margin: var(--space-large) auto 0 auto;
+}
+.margin-top-x-large {
+	margin-top: var(--space-x-large);
+}
+.margin-top-xx-large {
+	margin-top: calc(var(--space-large) * 2);
+}
+.margin-bottom-small {
+	margin-bottom: var(--space-small);
+}
+.margin-bottom-mid {
+	margin-bottom: var(--space-mid);
+}
+.margin-bottom-large {
+	margin-bottom: var(--space-large);
+}
+.margin-bottom-x-large {
+	margin-bottom: var(--space-x-large);
+}
+.margin-right-small {
+	margin-right: var(--space-small);
+}
+.margin-auto {
+	margin: 0 auto;
+}
+.margin-none {
+	margin: 0;
+}
+
+/* padding */
+[class*='padding'] {
+	box-sizing: border-box;
+}
+.padding-small {
+	padding: var(--space-small);
+}
+.padding-mid {
+	padding: var(--space-mid);
+}
+.padding-large {
+	padding: var(--space-large);
+}
+.padding-x-large {
+	padding: var(--space-x-large);
+}
+.padding-bottom-small {
+	padding-bottom: var(--space-small);
+}
+.padding-bottom-mid {
+	padding-bottom: var(--space-mid);
+}
+
+/* text */
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left !important;
+}
+.text-right {
+	text-align: right;
+}
+.text-ellipsis {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.text-color-point {
+	color: var(--color-secondary);
+}
+.text-color-dark {
+	color: var(--font-color-dark);
+}
+.text-color-mid {
+	color: var(--font-color-mid);
+}
+.text-color-light {
+	color: var(--font-color-light);
+}
+.text-placeholder {
+	color: Var(--color-font-placeholder);
+}
+.text-bold {
+	font-weight: var(--font-w-bold);
+}
+.text-light {
+	font-weight: var(--font-w-light);
+}
+.text-underline {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/* image */
+.image-cover {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.image-cover img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* background */
+.bg-white {
+	background-color: #fff;
+}
+.bg-opacity-dark {
+	background-color: var(--background-opacity);
+}
+
+/* 기타 */
+.scroll-fixed {
+	z-index: 300;
+	position: fixed;
+	overflow: hidden;
+	width: 100%;
+	height: calc(100vh - 8.8rem);
+	box-sizing: border-box;
+}
+.overflow-hidden {
+	overflow: hidden !important;
+}
+.overflow-x-scroll {
+	overflow-x: scroll;
+}
+.overflow-y-scroll {
+	overflow-y: scroll;
+}
+.required::after {
+	content: '*';
+	color: var(--color-secondary);
+	margin-left: 0.4rem;
+}
+.inner_title .required {
+	display: flex;
+	align-items: top;
+	gap: 0.2rem;
+}
+.inner_title .required::after {
+	content: '';
+	display: block;
+	flex-shrink: 0;
+	width: 6px;
+	height: 6px;
+	margin-left: 0.4rem;
+	background-color: var(--color-secondary);
+	border-radius: var(--border-radius-full);
+}

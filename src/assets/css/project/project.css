@@ -1,0 +1,380 @@
+/* Project 공통 START */
+.project_banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40vw;
+    max-height: calc(var(--inner-width)*.4);
+    border-radius: var(--border-radius-mid);
+    overflow: hidden;
+    margin-top: var(--header-height);
+}
+
+.project_banner>div {
+    width: 50%;
+    height: 100%;
+}
+
+.project_banner .text_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: var(--space-xxx-large) var(--space-x-large);
+    box-sizing: border-box;
+}
+
+.project_banner .text_wrap .logo_wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: auto;
+    height: 3.2rem;
+    margin-bottom: var(--space-mid);
+}
+
+.project_banner .text_wrap .logo_wrap img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+.project_banner .text_wrap .headline {
+    font-weight: var(--font-w-bold);
+    margin-bottom: .8rem;
+}
+
+.project_banner .text_wrap .body1 {
+    font-size: var(--font-s-small);
+    word-break: keep-all;
+}
+
+.project_banner .text_wrap .contribution {
+    margin-top: var(--space-x-large);
+}
+
+.project_banner .text_wrap .contribution>li {
+    display: flex;
+    align-items: center;
+}
+
+.project_banner .text_wrap .contribution>li+li {
+    margin-top: 1.2rem;
+}
+
+.project_banner .text_wrap .contribution li .index {
+    width: 7rem;
+    font-size: var(--font-s-small);
+    font-weight: var(--font-w-mid);
+    line-height: 1;
+}
+
+.project_banner .text_wrap .contribution li .chart {
+    display: flex;
+    gap: .4rem;
+}
+
+.project_banner .text_wrap .contribution li .chart li {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--border-radius-full);
+    overflow: hidden;
+}
+
+.project_banner .text_wrap .contribution li .chart .on {
+    background-color: var(--color-font-dark);
+}
+
+.project_banner .text_wrap .contribution li .chart .half,
+.project_banner .text_wrap .contribution li .chart .off {
+    border: 1px solid var(--color-font-dark);
+    box-sizing: border-box;
+}
+
+.project_banner .text_wrap .contribution li .chart .half span {
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-color: var(--color-font-dark);
+}
+
+.project_banner .image_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project_banner .image_wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.description .title1,
+.detailImage .title1 {
+    font-weight: var(--font-w-bold);
+    margin-bottom: var(--space-mid);
+}
+
+.description p {
+    color: Var(--color-font-mid);
+}
+
+.detailImage .app,
+.detailImage .web {
+    display: flex;
+    justify-content: center;
+}
+
+.detailImage .app img,
+.detailImage .web img {
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.detailImage .web {
+    margin-top: -1rem;
+}
+
+.btn_back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16rem;
+    height: 4rem;
+    border: 1px solid var(--color-border-light);
+    color: var(--color-font-mid);
+    font-size: var(--font-s-small);
+    border-radius: var(--border-radius-small);
+    transition-duration: .2s;
+    margin: 0 auto;
+    /* margin: 0 auto 6rem auto; */
+}
+
+.c_section:has(.btn_back) {
+    padding-bottom: 6rem;
+}
+
+.btn_back:hover {
+    color: var(--color-base-white);
+    border-color: rgba(0, 0, 0, 0);
+    background: rgb(190, 236, 179);
+    background: -moz-linear-gradient(-45deg, rgba(190, 236, 179, 1) 0%, rgba(164, 211, 255, 1) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(190, 236, 179, 1) 0%, rgba(164, 211, 255, 1) 100%);
+    background: linear-gradient(135deg, rgba(190, 236, 179, 1) 0%, rgba(164, 211, 255, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#beecb3', endColorstr='#a4d3ff', GradientType=1);
+}
+
+/* Project 공통 END */
+
+/* Project 공통 반응형 START */
+@media screen and (max-width:1024px) {
+    .project_banner .text_wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: var(--space-x-large) var(--space-mid);
+        box-sizing: border-box;
+    }
+
+    .project_banner .text_wrap .logo_wrap {
+        height: 2.4rem;
+    }
+
+    .project_banner .text_wrap .headline {
+        font-size: var(--font-s-x-large);
+    }
+
+    .project_banner .text_wrap .contribution {
+        margin-top: var(--space-mid);
+    }
+}
+
+@media screen and (max-width:768px) {
+    .project_banner {
+        flex-direction: column-reverse;
+        gap: var(--space-large);
+        width: 100%;
+        height: auto;
+        max-height: initial;
+    }
+
+    .project_banner>div {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .project_banner .text_wrap {
+        padding: 0;
+    }
+
+    .project_banner .image_wrap {
+        height: 50vw;
+        border-radius: var(--border-radius-mid);
+        overflow: hidden;
+    }
+
+    .description .title1,
+    .detailImage .title1 {
+        font-size: var(--font-s-mid);
+        font-weight: var(--font-w-bold);
+        margin-bottom: var(--space-small);
+    }
+
+    .detailImage {
+        padding-top: 0;
+    }
+
+    .description p {
+        font-size: var(--font-s-small);
+    }
+}
+
+/* Project 공통 반응형 END */
+
+/* Remember START */
+
+@media screen and (min-width:768px) {
+    .Remember .project_banner .text_wrap {
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff7749+1,ff5414+100 */
+        background: rgb(255, 119, 73);
+        /* Old browsers */
+        background: -moz-linear-gradient(-45deg, rgba(255, 119, 73, 1) 1%, rgba(255, 84, 20, 1) 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, rgba(255, 119, 73, 1) 1%, rgba(255, 84, 20, 1) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, rgba(255, 119, 73, 1) 1%, rgba(255, 84, 20, 1) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff7749', endColorstr='#ff5414', GradientType=1);
+        /* IE6-9 fallback on horizontal gradient */
+    }
+
+    .Remember .project_banner .text_wrap {
+        color: #222;
+    }
+
+    .Remember .project_banner .text_wrap .contribution li .chart .on {
+        background-color: #222;
+    }
+
+    .Remember .project_banner .text_wrap .contribution li .chart .half,
+    .Remember .project_banner .text_wrap .contribution li .chart .off {
+        border-color: #222;
+    }
+}
+
+/* Remember END */
+
+/* Sobeit START */
+.Sobeit .project_banner .text_wrap .logo_wrap {
+    height: 6rem;
+}
+
+@media screen and (min-width:768px) {
+    .Sobeit .project_banner .text_wrap {
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2fcdeb+0,3c46e2+100 */
+        background: rgb(47, 205, 235);
+        /* Old browsers */
+        background: -moz-linear-gradient(-45deg, rgba(47, 205, 235, 1) 0%, rgba(60, 70, 226, 1) 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, rgba(47, 205, 235, 1) 0%, rgba(60, 70, 226, 1) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, rgba(47, 205, 235, 1) 0%, rgba(60, 70, 226, 1) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2fcdeb', endColorstr='#3c46e2', GradientType=1);
+        /* IE6-9 fallback on horizontal gradient */
+    }
+
+    .Sobeit .project_banner .text_wrap {
+        color: #fff;
+    }
+
+    .Sobeit .project_banner .text_wrap .contribution li .chart .on {
+        background-color: #fff;
+    }
+
+    .Sobeit .project_banner .text_wrap .contribution li .chart .half,
+    .Sobeit .project_banner .text_wrap .contribution li .chart .off {
+        border-color: #fff;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .Sobeit .project_banner .text_wrap .logo_wrap {
+        height: 5rem;
+    }
+}
+
+/* Sobeit END */
+
+/* GiveHeart START */
+@media screen and (min-width:768px) {
+    .GiveHeart .project_banner .text_wrap {
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e84c5c+1,e50d23+100 */
+        background: linear-gradient(135deg, rgba(232, 76, 92, 1) 1%, rgba(229, 13, 35, 1) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    }
+
+    .GiveHeart .project_banner .text_wrap {
+        color: #fff;
+    }
+
+    .GiveHeart .project_banner .text_wrap .contribution li .chart .on {
+        background-color: #fff;
+    }
+
+    .GiveHeart .project_banner .text_wrap .contribution li .chart .half,
+    .GiveHeart .project_banner .text_wrap .contribution li .chart .off {
+        border-color: #fff;
+    }
+}
+
+/* GiveHeart END */
+
+/* Humanvalue START */
+.Humanvalue .project_banner .text_wrap .logo_wrap {
+    height: 4.8rem;
+}
+
+.Humanvalue .detailImage .web img {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width:768px) {
+    .Humanvalue .project_banner .text_wrap {
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7269a8+0,615e86+40,474d52+100 */
+        background: rgb(114, 105, 168);
+        /* Old browsers */
+        background: -moz-linear-gradient(-45deg, rgba(114, 105, 168, 1) 0%, rgba(97, 94, 134, 1) 40%, rgba(71, 77, 82, 1) 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg, rgba(114, 105, 168, 1) 0%, rgba(97, 94, 134, 1) 40%, rgba(71, 77, 82, 1) 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg, rgba(114, 105, 168, 1) 0%, rgba(97, 94, 134, 1) 40%, rgba(71, 77, 82, 1) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7269a8', endColorstr='#474d52', GradientType=1);
+        /* IE6-9 fallback on horizontal gradient */
+
+    }
+
+    .Humanvalue .project_banner .text_wrap {
+        color: #fff;
+    }
+
+    .Humanvalue .project_banner .text_wrap .contribution li .chart .on {
+        background-color: #fff;
+    }
+
+    .Humanvalue .project_banner .text_wrap .contribution li .chart .half,
+    .Humanvalue .project_banner .text_wrap .contribution li .chart .off {
+        border-color: #fff;
+    }
+
+    .Humanvalue .project_banner .text_wrap .contribution li .chart .half span {
+        background-color: #fff;
+    }
+}
+
+/* Humanvalue END */

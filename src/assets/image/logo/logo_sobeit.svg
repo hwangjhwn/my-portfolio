@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 1024 1024" style="enable-background:new 0 0 1024 1024;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_00000062904753316472410260000011612815710057235887_);}
+	.st1{clip-path:url(#SVGID_00000117636145067730280200000015632421645076610691_);}
+	.st2{fill:#E1FE65;}
+	.st3{opacity:0.8;fill:url(#패스_353754_00000041982145158775283880000012144511798989204662_);enable-background:new    ;}
+</style>
+<g id="그룹_560289" transform="translate(-5794.677 1109.323)">
+	<g id="그룹_560290" transform="translate(5964.661 -972.097)">
+		<g>
+			<g>
+				<g>
+					<g>
+						<defs>
+							
+								<rect id="SVGID_1_" x="-136" y="-40.4" transform="matrix(0.9999 -1.203305e-02 1.203305e-02 0.9999 -4.4849 4.1426)" width="956" height="830.4"/>
+						</defs>
+						<clipPath id="SVGID_00000141457804271291186480000002484884848826396093_">
+							<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+						</clipPath>
+						
+							<g id="마스크_그룹_519660" transform="translate(-0.102 -0.259)" style="clip-path:url(#SVGID_00000141457804271291186480000002484884848826396093_);">
+							<g>
+								<g>
+									<g>
+										<g>
+											<defs>
+												
+													<rect id="SVGID_00000106138354357917168060000001040693050236598206_" x="-98.8" y="-77.7" transform="matrix(0.1277 -0.9918 0.9918 0.1277 -101.4844 726.3313)" width="922" height="997.2"/>
+											</defs>
+											<clipPath id="SVGID_00000018928533642740476090000002062850440251276678_">
+												<use xlink:href="#SVGID_00000106138354357917168060000001040693050236598206_"  style="overflow:visible;"/>
+											</clipPath>
+											
+												<g id="마스크_그룹_519636" transform="matrix(-0.999, -0.035, 0.035, -0.999, 709.159, 664.806)" style="clip-path:url(#SVGID_00000018928533642740476090000002062850440251276678_);">
+												<g id="그룹_559580" transform="translate(32.644 19.696)">
+													<path id="합치기_205" class="st2" d="M492.2-70.2L361.1,172.2L143.9-79.9c-58.6-68-161.4-75.7-229.7-17.1
+														c-68.1,58.2-76.1,160.6-17.9,228.6c0.1,0.1,0.3,0.3,0.4,0.4l308.2,357.5c-5.5,64.7,27.9,126.4,85.1,157
+														c79.2,42.5,178,12.9,220.7-66L779.1,83.8c42.3-79.4,12.4-178-66.9-220.3C633.1-178.7,534.8-149,492.2-70.2z"/>
+													
+														<linearGradient id="패스_353754_00000083770715387266561260000000890551986748093069_" gradientUnits="userSpaceOnUse" x1="-390.0109" y1="-435.6841" x2="-388.8596" y2="-437.0797" gradientTransform="matrix(-205.6017 -110.7493 301.9574 -560.5726 51872.75 -287172.5312)">
+														<stop  offset="0" style="stop-color:#07FEBC"/>
+														<stop  offset="1" style="stop-color:#A6FE6F"/>
+													</linearGradient>
+													
+														<path id="패스_353754" style="opacity:0.8;fill:url(#패스_353754_00000083770715387266561260000000890551986748093069_);enable-background:new    ;" d="
+														M712.9-136.5c-79.2-42.6-178.1-13.1-220.7,66L223.7,426.4c-42.6,78.8-13.2,177.1,65.6,219.7c0.1,0.1,0.4,0.1,0.6,0.3
+														c79.2,42.6,178.1,12.9,220.7-66L779.1,83.5c42.6-78.8,13.2-177.1-65.6-219.7C713.3-136.4,713.2-136.4,712.9-136.5z"/>
+												</g>
+											</g>
+										</g>
+									</g>
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
