@@ -23,7 +23,7 @@
 					<h1 v-fade="{ delay: 1650 }">
 						<p class="highlight-purple highlight-3">
 							<span class="text">
-								UX/UI디자이너
+								프로덕트 디자이너
 							</span>
 							<span class="effect"></span>
 						</p>
@@ -71,7 +71,7 @@
 									<p>h1998jh@gmail.com</p>
 								</li>
 							</ul>
-							<a href="https://drive.google.com/file/d/1WKaS7vS59jNKEWSjUpz0-lKR2gk6iUSx/view?usp=drive_link" target="_blank" class="button">
+							<a href="https://drive.google.com/file/d/13mnp6aTxjcvI0f0Rar_iaTF2sBzYBt6Z/view?usp=drive_link" target="_blank" class="button">
 								이력서 확인하기
 							</a>
 						</div>
@@ -81,7 +81,7 @@
 					<section class="title_wrap">
 						<h1 class="headline">
 							안녕하세요,<br />
-							UX/UI 디자이너 황지환입니다.
+							프로덕트 디자이너 황지환입니다.
 						</h1>
 						<p class="articleBody">
 							사용자 경험과 인터페이스 디자인은 단순한 시각적 요소를 넘어서 사용자와의 감정적 연결과 효율적인 기능을 결합하는 예술입니다. 저는 이러한 예술을 통해 사람들과 상호작용하는
@@ -100,13 +100,35 @@
 							<li>
 								<div class="circle"></div>
 								<div class="content">
-									<p class="date">2021. 09. 01 ~ 2023. 12. 31</p>
+									<p class="date">2024. 04 ~ 재직중</p>
+									<div class="text">
+										<div class="ci_wrap" style="width:auto;height:2rem;">
+											<img src="@/assets/image/logo/CI-LiveForward.svg" alt="" />
+										</div>
+										<p>LiveForward 프로덕트 디자이너 근무</p>
+									</div>
+									<ol class="subtext">
+										<li>- B2C 패브릭 특화 커머스 서비스 런칭</li>
+										<li>- B2B 원단 관리, 3D 자동 렌더링 툴 구축</li>
+										<li>- 설치형 디스플레이 프로덕트 구축</li>
+									</ol>
+								</div>
+							</li>
+							<li>
+								<div class="circle"></div>
+								<div class="content">
+									<p class="date">2021. 09 ~ 2024. 01</p>
 									<div class="text">
 										<div class="ci_wrap">
 											<img src="@/assets/image/logo/logo_dever.svg" alt="" />
 										</div>
 										<p>DEVER 디자인팀 근무</p>
 									</div>
+									<ol class="subtext">
+										<li>- 웹/앱 서비스 기획 및 UX 디자인</li>
+										<li>- 웹사이트 디자인</li>
+										<li>- Vue.js 기반 웹 퍼블리싱</li>
+									</ol>
 								</div>
 							</li>
 							<li>
@@ -215,6 +237,13 @@
 									<img src="@/assets/image/software/chart_js.svg" alt="" />
 								</div>
 								<p class="name">Java Script</p>
+								<p class="percent">25%</p>
+							</div>
+							<div class="chart">
+								<div class="image_wrap">
+									<img src="@/assets/image/software/chart_react.svg" alt="" />
+								</div>
+								<p class="name">React</p>
 								<p class="percent">25%</p>
 							</div>
 							<div class="chart">

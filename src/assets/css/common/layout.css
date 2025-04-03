@@ -336,6 +336,14 @@
     height: 100%;
     object-fit: contain;
 }
+.About .education .subtext{
+    margin:var(--space-small) 0;
+}
+.About .education .subtext li{
+    font-size: var(--font-s-small);
+    color:var(--color-font-mid);
+    margin-top: 0;
+}
 
 .About .software .category {
     display: flex;
