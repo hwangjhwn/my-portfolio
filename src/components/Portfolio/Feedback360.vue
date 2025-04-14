@@ -5,11 +5,8 @@
                 <span class="flag">
                     Web UX/UI
                 </span>
-                <span class="flag">
-                    Side Project
-                </span>
                 <h1 class="headline">온라인 다면평가 솔루션</h1>
-                <h2 class="articleBody">온라인 다면평가 솔루션 신규 구축 사이드 프로젝트</h2>
+                <h2 class="articleBody">온라인 다면평가 솔루션 신규 구축 프로젝트</h2>
             </div>
             <div class="btn_wrap">
                 <a href="https://drive.google.com/file/d/1jURw6vRqknjave4sF0mXvn4-tH1No4LR/view?usp=drive_link"

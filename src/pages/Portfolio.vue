@@ -292,13 +292,15 @@
 		<!--Work START-->
 		<section class="c_section Work" id="Work">
 			<div class="c_inner">
-				<Feedback360/>
+				<Falette/>
 				<div class="line"></div>
 				<Remember />
 				<div class="line"></div>
-				<Buyko/>
-				<div class="line"></div>
 				<Sobeit />
+				<div class="line"></div>
+				<Feedback360/>
+				<div class="line"></div>
+				<Buyko/>
 			</div>
 		</section>
 		<!--Work END-->
@@ -344,6 +346,7 @@ import Remember from "@/components/Portfolio/Remember.vue";
 import Buyko from "@/components/Portfolio/Buyko.vue";
 import Sobeit from "@/components/Portfolio/Sobeit.vue";
 import Feedback360 from "@/components/Portfolio/Feedback360.vue";
+import Falette from "@/components/Portfolio/Falette.vue";
 // import GiveHeart from "@/components/Portfolio/GiveHeart.vue";
 // import HumanValue from "@/components/Portfolio/HumanValue.vue";
 import IconLabel from '@/components/SVG/IconLabel.vue';
