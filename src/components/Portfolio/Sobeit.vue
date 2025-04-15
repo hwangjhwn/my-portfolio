@@ -9,7 +9,7 @@
                 <h2 class="articleBody">후불결제(BNPL) 앱 서비스 신규 구축 및 반응형 랜딩페이지 제작</h2>
             </div>
             <div class="btn_wrap">
-                <a href="https://drive.google.com/file/d/1W7XrMaXjDw6Kq_aLKmT6JUPAcvRVqWVe/view?usp=drive_link" target="_blank">
+                <a href="https://drive.google.com/file/d/1gxcRwu_-YWiI01699TLAqbFgB4itYe1g/view?usp=drive_link" target="_blank">
                     <p>View Detail</p>
                 </a>
             </div>

@@ -296,9 +296,9 @@
 				<div class="line"></div>
 				<Remember />
 				<div class="line"></div>
-				<Sobeit />
-				<div class="line"></div>
 				<Feedback360/>
+				<div class="line"></div>
+				<Sobeit />
 				<div class="line"></div>
 				<Buyko/>
 			</div>

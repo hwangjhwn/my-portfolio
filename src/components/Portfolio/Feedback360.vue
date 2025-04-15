@@ -9,7 +9,7 @@
                 <h2 class="articleBody">온라인 다면평가 솔루션 신규 구축 프로젝트</h2>
             </div>
             <div class="btn_wrap">
-                <a href="https://drive.google.com/file/d/1jURw6vRqknjave4sF0mXvn4-tH1No4LR/view?usp=drive_link"
+                <a href="https://drive.google.com/file/d/1BfSe4mMfHv-yGLX4iIdsr4VfxBvwD-V6/view?usp=drive_link"
                     target="_blank">
                     <p>View Detail</p>
                 </a>
