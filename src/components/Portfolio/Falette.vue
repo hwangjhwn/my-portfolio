@@ -9,10 +9,9 @@
                 <h2 class="articleBody">패브릭 제품 특화 B2C 커머스 서비스 런칭</h2>
             </div>
             <div class="btn_wrap">
-                <a href="https://drive.google.com/file/d/1SsUjjzf0eaeH58Zy4YL6A2Cu5Hj1DhJF/view?usp=drive_link"
-                    target="_blank">
-                    <p>View Detail</p>
-                </a>
+                <router-link to="/projects/falette">
+                    <p>프로젝트 자세히 보기</p>
+                </router-link>
             </div>
         </div>
         <div class="text_wrap" v-fade="{ delay: 150 }">

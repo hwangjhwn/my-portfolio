@@ -1,0 +1,1601 @@
+:root {
+  --font-base: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-bodoni: "Libre Bodoni", var(--font-base);
+  --font-manrope: Manrope, var(--font-base);
+
+  /* Figma 그레이 팔레트 (첨부 이미지에서 추출) */
+  --gray-900: #222222;
+  --gray-800: #555555;
+  --gray-700: #808080;
+  --gray-600: #A6A6A6;
+  --gray-500: #BBBBBB;
+  --gray-400: #CCCCCC;
+  --gray-300: #DADADA;
+  --gray-200: #ECECEC;
+  --gray-100: #F5F5F5;
+  --gray-50: #FAFAFA;
+  --white: #FFFFFF;
+
+  /* 역할별 색상: 각 화면에서는 이 변수를 사용합니다. */
+  --ink: var(--gray-900);
+  --muted: var(--gray-800);
+  --paper: var(--white);
+  --wash: var(--gray-100);
+  --line: var(--gray-300);
+  --text-inverse: var(--gray-50);
+  --text-inverse-muted: var(--gray-400);
+  --line-inverse: var(--gray-800);
+  --header-background: rgba(255, 255, 255, 0.96);
+  --shadow-soft: rgba(34, 34, 34, 0.05);
+  --shadow-marker: rgba(34, 34, 34, 0.13);
+  --accent: #E63B32;
+}
+html {
+  /* 브라우저 기본 16px × 62.5% = 10px (1rem) */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9.6rem;
+}
+body {
+  color: var(--ink);
+  background: var(--paper);
+  font-family: var(--font-base);
+  font-size: 1.6rem;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  word-break: keep-all;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+::-moz-selection {
+  color: var(--white);
+  background: var(--accent);
+}
+::selection {
+  color: var(--white);
+  background: var(--accent);
+}
+:focus-visible {
+  outline: 0.3rem solid var(--accent);
+  outline-offset: 0.6rem;
+}
+.page_inner {
+  width: min(128rem,calc(100% - 11.2rem));
+  margin-inline: auto;
+}
+.screenReader {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  overflow: hidden;
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.skipLink {
+  z-index: 100;
+  position: fixed;
+  top: -10rem;
+  left: 2rem;
+  padding: 1.2rem 2rem;
+  color: var(--white);
+  background: var(--accent);
+}
+.skipLink:focus {
+  top: 1.2rem;
+}
+.siteHeader {
+  z-index: 50;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  border-bottom: 0.1rem solid var(--line);
+  background: var(--header-background);
+  -webkit-backdrop-filter: blur(1.2rem);
+  backdrop-filter: blur(1.2rem);
+}
+.header_inner {
+  justify-content: space-between;
+  width: min(144rem,calc(100% - 11.2rem));
+  height: 8.8rem;
+  margin: auto;
+}
+.header_inner,
+.wordmark {
+  display: flex;
+  align-items: center;
+}
+.wordmark {
+  gap: 0.4rem;
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: -0.2rem;
+}
+.wordmark span {
+  color: var(--accent);
+  font-size: 3.6rem;
+  line-height: 1;
+}
+.siteHeader nav {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.siteHeader nav a {
+  padding: 0.8rem 0;
+  transition: color .2s;
+}
+.siteHeader nav a.active,
+.siteHeader nav a:hover {
+  color: var(--accent);
+}
+.siteHeader nav .resumeLink {
+  margin-left: 1.6rem;
+  padding: 0.8rem 1.8rem;
+  border: 0.1rem solid var(--line);
+  border-radius: 4rem;
+}
+.hero_container {
+  padding-top: 4.6rem;
+}
+.heroCaption,
+.heroMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: .09em;
+}
+.heroMeta {
+  color: var(--gray-700);
+}
+.hero_container h1 {
+  margin: 4.4rem 0 3.4rem;
+  font-size: clamp(7rem,9.1vw,13.2rem);
+  font-weight: 700;
+  line-height: 1.03;
+  letter-spacing: -.07em;
+}
+.heroBridge {
+  display: flex;
+  align-items: baseline;
+  gap: .2em;
+}
+.heroBridge i {
+  font-family: var(--font-bodoni);
+  color:var(--gray-600);
+  font-style: italic;
+  /* 웹 기준 7.2rem / 제목 13.2rem 비율을 유지하며 함께 축소합니다. */
+  font-size: min(7.2rem, 0.545455em);
+  font-weight: 400;
+  letter-spacing: -.07em;
+}
+.heroBridge > span,
+.heroDot {
+  color: var(--accent);
+  border-radius:100%
+}
+.heroBottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 3.2rem;
+  margin-bottom: 4rem;
+}
+.heroBottom > p {
+  font-size: 2.3rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: -.04em;
+}
+.heroActions {
+  display: flex;
+  align-items: center;
+  gap: 2.6rem;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+  min-height: 4.4rem;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: 0.1rem solid var(--ink);
+  border-radius: 0.4rem;
+  transition: background .2s,transform .2s;
+}
+.button.primary {
+  color: var(--white);
+  background: var(--ink);
+}
+.button:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-0.2rem);
+}
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+  padding-block: 0.6rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.textLink:hover {
+  color: var(--accent);
+}
+.heroGraphic {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 22rem) max-content minmax(0, 22rem);
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(4rem,10vw,16rem);
+  height: 26rem;
+  background: var(--accent);
+}
+.heroGraphic:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 80%,rgba(254,110,78,.35),transparent 75%);
+  pointer-events: none;
+}
+.graphicLines {
+  max-width: 100%;
+  position: relative;
+  display: block;
+  width: 22rem;
+  height: 18rem;
+}
+.graphicLines:after,
+.graphicLines:before {
+  content: "";
+  position: absolute;
+  inset: 0.8rem;
+  border: 0.1rem solid rgba(255,240,226,.8);
+  border-radius: 50%;
+  transform: rotate(35deg);
+}
+.graphicLines:before {
+  box-shadow: inset 0 0 0 1.8rem var(--accent),inset 0 0 0 1.9rem rgba(255,240,226,.7),inset 0 0 0 3.6rem var(--accent),inset 0 0 0 3.7rem rgba(255,240,226,.7);
+}
+.graphicLines:after {
+  inset: 0 3rem;
+  transform: rotate(-42deg);
+  box-shadow: 0 0 0 1.5rem rgba(255,235,215,.08),0 0 0 3rem rgba(255,235,215,.06);
+}
+.graphicArrow {
+  color: #f5d7c7;
+  font-family: var(--font-bodoni);
+  font-size: 8rem;
+  font-weight: 100;
+}
+.graphicCircle {
+  z-index: 1;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background: #f2ded2;
+  box-shadow: 0 0 6rem rgba(255,205,170,.1);
+}
+.heroCaption {
+  padding-block: 1.7rem;
+  color: var(--muted);
+  font-size: 1rem;
+  border-bottom: 0.1rem solid var(--line);
+}
+.work_container {
+  padding-block: 10.4rem;
+}
+.sectionHeading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 3.2rem;
+  margin-bottom: 4.8rem;
+}
+.eyebrow {
+  color: var(--accent);
+  font-size: 1.1rem;
+  letter-spacing: .1em;
+}
+.eyebrow,
+h2 {
+  font-weight: 650;
+}
+h2 {
+  margin-top: 1.6rem;
+  font-size: clamp(2.8rem,3.6vw,4.8rem);
+  line-height: 1.3;
+  letter-spacing: -.055em;
+}
+.sectionNote {
+  color: var(--muted);
+  font-size: 1.4rem;
+}
+.projectCard {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  align-items: center;
+  gap: 4.8rem;
+  padding-block: 4.4rem;
+  border-top: 0.1rem solid var(--line);
+}
+.projectImage_link {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  background: var(--wash);
+}
+.projectImage_link img {
+  width: 100%;
+  aspect-ratio: 1.5;
+  -o-object-fit: contain;
+  object-fit: contain;
+  transition: transform .5s;
+}
+.projectImage_link:hover img {
+  transform: scale(1.035);
+}
+.imageAction {
+  position: absolute;
+  bottom: 1.6rem;
+  right: 1.6rem;
+  padding: 0.8rem 1.4rem;
+  color: var(--white);
+  background: var(--ink);
+  border-radius: 4rem;
+  font-size: 1.2rem;
+}
+.projectIndex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.6rem;
+  justify-content: space-between;
+  margin-bottom: 2.2rem;
+  color: var(--muted);
+  font-size: 1rem;
+  letter-spacing: .05em;
+}
+.projectIndex span:first-child {
+  color: var(--accent);
+}
+.projectCopy h3 {
+  font-size: clamp(2.4rem,2.5vw,3.4rem);
+  font-weight: 650;
+  letter-spacing: -.055em;
+  line-height: 1.3;
+}
+.projectCopy h3:hover {
+  color: var(--accent);
+}
+.projectTitle {
+  margin-top: 1.2rem;
+  font-size: 1.7rem;
+  line-height: 1.5;
+  letter-spacing: -.03em;
+}
+.projectDescription {
+  margin: 1.8rem 0 2rem;
+  color: var(--muted);
+  font-size: 1.4rem;
+  line-height: 1.85;
+}
+.projectMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 2rem;
+  margin-bottom: 1.6rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+.allWork {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 2.8rem;
+  padding: 2.4rem 2.8rem;
+  background: var(--wash);
+}
+.allWork p {
+  color: var(--muted);
+  font-size: 1.4rem;
+}
+.about_container {
+  padding-block: 10rem;
+  background: var(--wash);
+  margin-top: 10rem;
+}
+.aboutSymbol {
+  opacity: 0.6;
+  width: 18rem;
+  height: auto;
+  flex-shrink: 0;
+}
+.aboutIntro {
+  display: grid;
+  grid-template-columns: 18rem minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(3.2rem, 5vw, 7rem);
+  padding-block: 2.8rem 5.2rem;
+}
+.introLead {
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -.04em;
+}
+.introLead span{
+  font-weight: 800;
+}
+.aboutDescription p {
+  margin-bottom: .8rem;
+  color: var(--muted);
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+.expertise_grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 3.2rem;
+  padding-block: 3.6rem 5rem;
+  border-top: 0.1rem solid var(--line);
+  border-bottom: 0.1rem solid var(--line);
+}
+/* 역량 목록: 번호 배지와 영문 타이틀을 분리합니다. */
+.expertiseHeading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.expertiseNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+}
+.expertiseLabel {
+  font-family: var(--font-bodoni);
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 700;
+  padding-top: 0.2rem;
+  line-height: 1;
+  color: var(--accent);
+}
+.expertise_grid h3 {
+  margin: 1.6rem 0 1.2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -.04em;
+}
+.expertise_grid p {
+  color: var(--muted);
+  font-size: 1.4rem;
+}
+.career_container {
+  display: grid;
+  grid-template-columns: .4fr 1.6fr;
+  gap: 4rem;
+  margin-top: 6.4rem;
+}
+.careerItem {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(0, 26rem) minmax(0, 1fr);
+  gap: 3.2rem;
+  padding-bottom: 2.8rem;
+  margin-bottom: 2.8rem;
+  border-bottom: 0.1rem solid var(--line);
+}
+.career_list > .careerItem:last-child {
+  border-bottom: 0;
+}
+.careerItem h4 {
+  font-size: 2.3rem;
+  font-weight: 600;
+  letter-spacing: -.03em;
+}
+.careerItem div p {
+  color: var(--muted);
+  font-size: 1.3rem;
+}
+.careerDate {
+  display: block;
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+.careerItem > p,
+.careerDescription {
+  font-size: 1.4rem;
+  color: var(--muted);
+}
+.contact_container {
+  padding-block: 9.6rem 10.4rem;
+  color: var(--text-inverse);
+  background: var(--ink);
+}
+.contact_container .eyebrow {
+  color: var(--accent);
+}
+.contact_container h2 {
+  margin-top: 2.8rem;
+  font-size: clamp(3.2rem,4.5vw,6rem);
+}
+.contact_container h2 span {
+  color: var(--accent);
+}
+.contactDescription {
+  margin-top: 2.4rem;
+  color: var(--text-inverse-muted);
+  font-size: 1.4rem;
+}
+.contactEmail {
+  display: inline-flex;
+  align-items: center;
+  gap: 4rem;
+  padding-block: 1.6rem;
+  margin-top: 2.8rem;
+  font-size: clamp(2rem,3.3vw,4.4rem);
+  border-bottom: 0.1rem solid var(--line-inverse);
+  letter-spacing: -.04em;
+}
+.contactEmail:hover {
+  color: var(--accent);
+}
+.contactLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem 3.6rem;
+  margin-top: 3.2rem;
+  color: var(--text-inverse-muted);
+  font-size: 1.3rem;
+}
+.contactLinks a:hover {
+  color: var(--white);
+}
+.siteFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-block: 2.4rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+.detail_container {
+  padding-block: 4.4rem 10rem;
+}
+.backLink {
+  color: var(--muted);
+}
+.detailHeading {
+  max-width: 95rem;
+  margin-top: 7.2rem;
+}
+.detailHeading h1 {
+  margin-top: 2rem;
+  font-size: clamp(3.6rem,5vw,6.8rem);
+  font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: -.055em;
+}
+.detailSubtitle {
+  margin-top: 2.4rem;
+  font-size: 2.3rem;
+  line-height: 1.5;
+  letter-spacing: -.04em;
+}
+.detailDescription {
+  max-width: 76rem;
+  margin-top: 2.4rem;
+  color: var(--muted);
+}
+.detailMeta {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 3.2rem;
+  padding-block: 2.8rem;
+  margin-block: 4.4rem;
+  border-top: 0.1rem solid var(--line);
+  border-bottom: 0.1rem solid var(--line);
+}
+.detailMeta dt {
+  color: var(--muted);
+  font-size: 1.1rem;
+  letter-spacing: .08em;
+}
+.detailMeta dd {
+  margin-top: 0.8rem;
+  font-size: 1.4rem;
+}
+.detailCover {
+  width: 100%;
+  height: clamp(24rem, 32vw, 42rem);
+  -o-object-fit: cover;
+  object-fit: cover;
+  object-position: center;
+  background: var(--wash);
+}
+.caseSummary {
+  padding-block: 7.2rem;
+}
+.originalDescription {
+  max-width: 84rem;
+  margin-top: 3.2rem;
+  color: var(--muted);
+  font-size: 1.8rem;
+  line-height: 1.9;
+}
+.detailEnd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.4rem;
+  padding-top: 3.2rem;
+  border-top: 0.1rem solid var(--line);
+}
+.notFound {
+  min-height: 70vh;
+  padding-block: 14rem;
+}
+.notFound h1 {
+  margin: 2rem 0;
+  font-size: clamp(2.8rem,4vw,5.2rem);
+  font-weight: 650;
+}
+.notFound .button {
+  margin-top: 3.2rem;
+}
+@media (min-width: 93.75rem) {
+  .hero_container h1 {
+    font-size: 14.4rem;
+  }
+}
+@media (max-width: 62.5rem) {
+  .header_inner,
+  .page_inner {
+    width: calc(100% - 6.4rem);
+  }
+  .projectCard {
+    gap: 2.8rem;
+  }
+  .heroActions {
+    gap: 1.6rem;
+  }
+  .heroGraphic {
+    height: 22rem;
+  }
+  .heroBottom {
+    align-items: start;
+    flex-direction: column;
+  }
+  .career_container {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+  .aboutIntro {
+    gap: 3.6rem;
+  }
+  .expertise_grid {
+    gap: 2.4rem;
+  }
+  .projectCopy h3 {
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 43.75rem) {
+  .header_inner,
+  .page_inner {
+    width: calc(100% - 4rem);
+  }
+  .header_inner {
+    height: 7rem;
+  }
+  .wordmark {
+    font-size: 2.3rem;
+  }
+  .wordmark span {
+    font-size: 2.9rem;
+  }
+  .siteHeader nav {
+    gap: 1.8rem;
+    font-size: 1.2rem;
+  }
+  .siteHeader nav .resumeLink {
+    margin-left: 0;
+    padding: 0.6rem 1rem;
+  }
+  .hero_container {
+    padding-top: 3rem;
+  }
+  .heroMeta {
+    font-size: 0.9rem;
+    gap: 1rem;
+    letter-spacing: .02em;
+  }
+  .hero_container h1 {
+    margin-top: 4.4rem;
+    font-size: clamp(5.3rem,12.8vw,9rem);
+  }
+  .heroBottom > p {
+    font-size: 2rem;
+  }
+  .heroBottom {
+    gap: 2.4rem;
+    margin-bottom: 3.2rem;
+  }
+  .heroActions {
+    flex-wrap: wrap;
+    gap: 1.2rem 2.4rem;
+  }
+  .button {
+    padding: 1.2rem 1.8rem;
+    min-height: 4.8rem;
+    font-size: 1.3rem;
+  }
+  .heroGraphic {
+    grid-template-columns: minmax(0, 12.5rem) max-content minmax(0, 12.5rem);
+    height: 18rem;
+    gap: 2.8rem;
+  }
+  .graphicLines {
+    width: 12.5rem;
+    height: 11rem;
+  }
+  .graphicCircle {
+    width: 8rem;
+    height: 8rem;
+  }
+  .graphicArrow {
+    font-size: 5.8rem;
+  }
+  .heroCaption {
+    font-size: 0.8rem;
+    letter-spacing: .02em;
+  }
+  .heroCaption span:last-child {
+    max-width: 15rem;
+    text-align: right;
+  }
+  .work_container {
+    padding-block: 7.2rem;
+  }
+  .sectionHeading {
+    align-items: start;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3.2rem;
+  }
+  .sectionNote {
+    font-size: 1.3rem;
+  }
+  .projectCard {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+    padding-block: 2.8rem 3.6rem;
+  }
+  .projectIndex {
+    margin-bottom: 1.4rem;
+  }
+  .projectCopy h3 {
+    font-size: 2.9rem;
+  }
+  .projectTitle {
+    font-size: 1.6rem;
+  }
+  .projectDescription {
+    margin-block: 1.4rem;
+  }
+  .allWork {
+    align-items: start;
+    flex-direction: column;
+    padding: 2.4rem;
+    gap: 1.2rem;
+  }
+  .about_container {
+    padding-block: 7.2rem;
+  }
+  .about_container .sectionHeading {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .aboutSymbol {
+    width: 8rem;
+  }
+  .aboutIntro,
+  .careerItem,
+  .expertise_grid {
+    grid-template-columns: 1fr;
+  }
+  .aboutIntro {
+    gap: 2.4rem;
+    padding-top: 1.6rem;
+  }
+  .introLead {
+    font-size: 2.1rem;
+  }
+  .expertise_grid {
+    gap: 3.2rem;
+    padding-block: 3.2rem;
+  }
+  .expertise_grid h3 {
+    margin-top: 0.8rem;
+  }
+  .career_container {
+    margin-top: 4.4rem;
+  }
+  .careerItem {
+    gap: 1.6rem;
+  }
+  .additional_grid {
+    gap: 2.4rem;
+  }
+  .contact_container {
+    padding-block: 7.2rem;
+  }
+  .contactEmail {
+    gap: 1.6rem;
+    font-size: clamp(2rem,5.8vw,3.6rem);
+  }
+  .contactDescription {
+    max-width: 28rem;
+  }
+  .siteFooter {
+    flex-wrap: wrap;
+    gap: 0.8rem 2rem;
+  }
+  .siteFooter p:nth-child(2) {
+    display: none;
+  }
+  .detailHeading {
+    margin-top: 4.4rem;
+  }
+  .detailSubtitle {
+    font-size: 1.9rem;
+  }
+  .detailMeta {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-block: 2.8rem;
+  }
+  .caseSummary {
+    padding-block: 4.8rem;
+  }
+  .originalDescription {
+    font-size: 1.6rem;
+  }
+  .detailEnd {
+    align-items: start;
+    flex-direction: column;
+  }
+}
+@media (max-width: 23.75rem) {
+  .siteHeader nav {
+    gap: 1.2rem;
+  }
+  .siteHeader nav .resumeLink {
+    padding-inline: 0.8rem;
+  }
+  .heroGraphic {
+    gap: 2rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  :after,
+  :before {
+    transition: none !important;
+    -webkit-animation: none !important;
+    animation: none !important;
+  }
+}
+/* 웹 사례 상세: 짧은 설명과 대표 설계 화면을 중심으로 구성합니다. */
+.caseOverview_container {
+  padding-block: 6.4rem;
+}
+.caseOverview_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6.4rem;
+}
+.caseOverview_grid h2 {
+  margin: 1.2rem 0 2rem;
+  font-size: 2.8rem;
+}
+.caseOverview_grid article > p:last-child {
+  color: var(--muted);
+  font-size: 1.6rem;
+  line-height: 1.85;
+}
+.research_wrap {
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+  margin-top: 3.6rem;
+  padding: 2.8rem 3.2rem;
+  background: var(--wash);
+}
+.research_wrap > div {
+  flex-shrink: 0;
+}
+.research_wrap strong {
+  display: block;
+  color: var(--accent);
+  font-size: 4.4rem;
+  font-weight: 650;
+  line-height: 1.2;
+}
+.research_wrap span {
+  font-size: 1.4rem;
+}
+.research_wrap > p {
+  max-width: 56rem;
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+.flow_container {
+  padding: 2.8rem 0;
+  margin-top: 4rem;
+  border-top: 0.1rem solid var(--line);
+  border-bottom: 0.1rem solid var(--line);
+}
+.flow_list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  margin-top: 2.2rem;
+}
+.flow_list li {
+  position: relative;
+}
+.flow_list li:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  right: 0;
+  top: 2.3rem;
+  color: var(--muted);
+}
+.flow_list span {
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+.flow_list p {
+  padding-right: 2.2rem;
+  margin-top: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.design_container > h2 {
+  margin-bottom: 4.8rem;
+  font-size: clamp(2.8rem,3.2vw,4rem);
+}
+.designSection {
+  margin-bottom: 5.6rem;
+}
+.designSection_copy {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 1.6rem;
+  max-width: 90rem;
+  margin-bottom: 2.8rem;
+}
+.designNumber {
+  color: var(--accent);
+  font-size: 1.4rem;
+  padding-top: 0.4rem;
+}
+.designSection h3 {
+  font-size: 2.4rem;
+  font-weight: 650;
+  letter-spacing: -.04em;
+  line-height: 1.4;
+}
+.designSection_copy p {
+  max-width: 78rem;
+  margin-top: 1.4rem;
+  color: var(--muted);
+  font-size: 1.5rem;
+}
+.designSection figure {
+  padding: 2rem;
+  border: 0.1rem solid var(--line);
+  background: var(--wash);
+}
+.designSection img {
+  width: 100%;
+  background: white;
+}
+.designSection figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.6rem;
+  margin-top: 1.4rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+.designSection figcaption span {
+  flex-shrink: 0;
+}
+.outcome_container {
+  padding: 3.6rem 3.2rem;
+  margin-bottom: 6.4rem;
+  background: var(--wash);
+}
+.outcome_container h2 {
+  font-size: 2.8rem;
+}
+.outcome_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.2rem;
+  margin-top: 3.2rem;
+}
+.outcome_grid span {
+  color: var(--accent);
+  font-size: 1.3rem;
+}
+.outcome_grid p {
+  margin-top: 1.2rem;
+  font-size: 1.5rem;
+}
+@media (max-width: 43.75rem) {
+  .caseOverview_container {
+    padding-block: 4rem;
+  }
+  .caseOverview_grid {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+  }
+  .caseOverview_grid h2 {
+    font-size: 2.4rem;
+  }
+  .research_wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+    padding: 2.4rem;
+  }
+  .flow_list {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .flow_list li {
+    display: flex;
+    align-items: baseline;
+    gap: 1.6rem;
+  }
+  .flow_list li:not(:last-child)::after {
+    content: none;
+  }
+  .flow_list p {
+    margin: 0;
+  }
+  .designSection_copy {
+    grid-template-columns: 2.6rem 1fr;
+    gap: 0.8rem;
+  }
+  .designSection h3 {
+    font-size: 2.1rem;
+  }
+  .designSection figure {
+    padding: 1rem;
+  }
+  .designSection figcaption {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .designSection {
+    margin-bottom: 4rem;
+  }
+  .outcome_container {
+    padding: 2.8rem 2.4rem;
+    margin-bottom: 4rem;
+  }
+  .outcome_container h2 {
+    font-size: 2.4rem;
+  }
+  .outcome_grid {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+}
+
+/* Figma 원본의 대표 목업과 개별 화면: 원래 비율을 유지합니다. */
+.detailCover.figmaCover {
+  width: 100%;
+  height: clamp(24rem, 32vw, 42rem);
+  object-fit: cover;
+  object-position: right center;
+}
+.figmaCover_link img {
+  aspect-ratio: 11 / 7;
+  object-fit: cover;
+  object-position: right center;
+}
+.screenGallery {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4.8rem;
+  padding: 4rem;
+  background: var(--wash);
+  border: 0.1rem solid var(--line);
+}
+.designSection .screenGallery figure {
+  width: min(32rem, 100%);
+  padding: 0;
+  border: 0;
+  background: none;
+}
+.screenGallery img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 1.2rem 3.6rem var(--shadow-soft);
+}
+.designSection .screenGallery figcaption {
+  display: block;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+@media (max-width: 43.75rem) {
+  .screenGallery {
+    flex-wrap: wrap;
+    gap: 3.2rem;
+    padding: 2.4rem 2rem;
+  }
+  .designSection .screenGallery figure {
+    width: min(28rem, 100%);
+  }
+  .detailCover,
+  .detailCover.figmaCover {
+    height: clamp(20rem, 55vw, 28rem);
+  }
+}
+
+/* 리멤버: PC에서는 원본의 화면 옆 주석, 모바일에서는 번호로 연결합니다. */
+.annotatedGallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4.8rem;
+  padding: 4rem 2.4rem;
+  border: 0.1rem solid var(--line);
+  background: var(--wash);
+}
+.designSection .annotatedScreen {
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+.annotatedScreen_stage {
+  position: relative;
+  width: 58%;
+}
+.annotatedScreen_stage img {
+  width: 100%;
+  height: auto;
+}
+.desktopAnnotation {
+  position: absolute;
+  left: calc(100% + 2rem);
+  width: 64%;
+  transform: translateY(-50%);
+}
+.desktopAnnotation p {
+  color: var(--ink);
+  font-size: 1.2rem;
+  line-height: 1.65;
+}
+.annotationArrow {
+  position: absolute;
+  top: 50%;
+  left: -4.4rem;
+  width: 3.6rem;
+  height: 1.2rem;
+  transform: translateY(-50%);
+  color: var(--accent);
+}
+.designSection .annotatedScreen figcaption {
+  display: block;
+  margin-top: 1.8rem;
+  font-size: 1.3rem;
+  text-align: left;
+  color: var(--ink);
+}
+.screenMarker {
+  display: none;
+}
+.screenNotes {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+@media (min-width: 43.8125rem) and (max-width: 68.75rem) {
+  .annotatedGallery {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    padding: 3.2rem;
+  }
+  .annotatedScreen_stage {
+    width: min(32rem, 55%);
+  }
+  .desktopAnnotation {
+    left: calc(100% + 4rem);
+    width: 65%;
+  }
+  .annotationArrow {
+    left: -6.6rem;
+    width: 5.8rem;
+  }
+  .desktopAnnotation p {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 43.75rem) {
+  .annotatedGallery {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    padding: 2.4rem 1.8rem;
+  }
+  .annotatedScreen_stage {
+    width: min(32rem, 100%);
+    margin-inline: auto;
+  }
+  .desktopAnnotation {
+    display: none;
+  }
+  .screenMarker {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    transform: translate(-50%, -50%);
+    border: 0.2rem solid white;
+    border-radius: 50%;
+    color: white;
+    background: var(--accent);
+    box-shadow: 0 0.2rem 0.8rem var(--shadow-marker);
+    font-size: 1rem;
+    font-weight: 700;
+    pointer-events: none;
+  }
+  .designSection .annotatedScreen figcaption {
+    margin-top: 1.2rem;
+    text-align: center;
+  }
+  .screenNotes {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+    margin-top: 2.4rem;
+  }
+  .screenNotes li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    margin-top: 1.8rem;
+  }
+  .screenNotes li > span {
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    color: white;
+    background: var(--accent);
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .screenNotes h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  .screenNotes p {
+    margin-top: 0.6rem;
+    color: var(--muted);
+    font-size: 1.3rem;
+    line-height: 1.7;
+  }
+}
+
+/* 헤더 심볼: 제공된 SVG의 원래 비율을 유지합니다. */
+.wordmark .headerSymbol {
+  width: 8.7rem;
+  height: 3.6rem;
+  object-fit: contain;
+}
+@media (max-width: 43.75rem) {
+  .wordmark .headerSymbol {
+    width: 6.8rem;
+    height: 2.8rem;
+  }
+}
+
+/* 포인트 텍스트에 필요한 폰트 클래스를 선택해서 적용합니다. */
+.font-pretendard {
+  font-family: var(--font-base);
+}
+.font-bodoni {
+  font-family: var(--font-bodoni);
+}
+.font-manrope {
+  font-family: var(--font-manrope);
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* 스크롤 등장: 작은 이동과 페이드, 한 번 표시한 콘텐츠는 유지합니다. */
+.scrollReveal {
+  opacity: 0;
+  transform: translateY(2.4rem);
+  transition: opacity 650ms ease, transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.scrollReveal.is-revealed,
+.scrollReveal:focus-within {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .scrollReveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* 히어로: 선만 느리게 회전하고 원은 첫 진입 시 한 번 나타납니다. */
+.heroGraphic .graphicLines::before {
+  animation: heroOrbitPrimary 24s linear infinite;
+}
+.heroGraphic .graphicLines::after {
+  animation: heroOrbitSecondary 32s linear infinite;
+}
+.heroGraphic .graphicCircle {
+  animation: heroCircleEnter 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.heroGraphic:hover .graphicLines::before,
+.heroGraphic:hover .graphicLines::after {
+  animation-play-state: paused;
+}
+@keyframes heroOrbitPrimary {
+  from { transform: rotate(35deg); }
+  to { transform: rotate(395deg); }
+}
+@keyframes heroOrbitSecondary {
+  from { transform: rotate(-42deg); }
+  to { transform: rotate(-402deg); }
+}
+@keyframes heroCircleEnter {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .heroGraphic .graphicLines::before,
+  .heroGraphic .graphicLines::after,
+  .heroGraphic .graphicCircle {
+    animation: none;
+  }
+}
+
+/* 소개: 사진 옆에 인사, 설명, 이력서 링크를 하나로 묶습니다. */
+.aboutProfile {
+  width: 18rem;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+}
+.aboutCopy {
+  max-width: 70rem;
+  min-width: 0;
+}
+.aboutCopy .introLead {
+  margin-bottom: 2.4rem;
+  color: var(--ink);
+}
+.aboutCopy .textLink {
+  margin-top: 0.8rem;
+}
+@media (max-width: 43.75rem) {
+  .aboutProfile {
+    width: 14rem;
+  }
+}
+
+/* 로고는 원본 비율을 유지하며 같은 높이로 맞춥니다. */
+.careerLogo {
+  width: 100%;
+  height: 3.6rem;
+  object-fit: contain;
+  object-position: center;
+}
+.schoolLogo {
+  width: 3.6rem;
+  height: 3.6rem;
+}
+.toolList {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 1.2rem 2rem;
+}
+.toolList li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.4rem;
+  color: var(--muted);
+  font-size: 1.4rem;
+}
+.toolList img {
+  width: 2.4rem;
+  height: 2.4rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* 로고 유무와 관계없이 모든 이름의 시작점을 맞춥니다. */
+.careerIdentity {
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr);
+  align-items: start;
+  gap: 1.6rem;
+}
+.careerLogoSlot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.6rem;
+}
+.careerInfo {
+  min-width: 0;
+}
+@media (max-width: 43.75rem) {
+  .careerIdentity {
+    grid-template-columns: 4.8rem minmax(0, 1fr);
+    gap: 1.2rem;
+  }
+}
+
+/* 새 SVG의 시각적 크기를 기존 도구 아이콘과 맞춥니다. */
+.toolList img.toolLogoCompact {
+  width: 2rem;
+  height: 2rem;
+  margin-inline: 0.2rem;
+}
+
+.careerDescription p + p {
+  margin-top: 1.2rem;
+}
+.careerItem .careerDescription p {
+  font-size: 1.4rem;
+}
+
+.headingDot {
+  margin-left: 0.3rem;
+  color: var(--accent);
+}
+
+/* 리멤버 상세: 조사 근거와 화면별 설계 의도를 연결합니다. */
+.researchInsights {
+  margin-block: 3.2rem 4rem;
+}
+.researchInsights > h3 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.insightGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.6rem;
+}
+.insightGrid article {
+  padding: 2.4rem;
+  background: var(--wash);
+  border: 0.1rem solid var(--line);
+}
+.insightNumber {
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+.insightGrid h4,
+.designPoints h4 {
+  margin-block: 0.8rem 1.2rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+.insightGrid p,
+.designPoints p {
+  color: var(--muted);
+  font-size: 1.4rem;
+  line-height: 1.8;
+}
+.insightDirection {
+  margin-top: 2rem;
+  padding-top: 1.6rem;
+  border-top: 0.1rem solid var(--line);
+}
+.insightDirection span {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--accent);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.flow_list small {
+  display: block;
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+.designPoints {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.4rem;
+  margin-top: 2.4rem;
+}
+.designPoints li {
+  padding: 2rem 0;
+  border-top: 0.1rem solid var(--line);
+}
+.annotatedGallery.threeScreens {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 3.2rem;
+}
+@media (max-width: 68.75rem) {
+  .annotatedGallery.threeScreens {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 62.5rem) {
+  .designPoints {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+@media (max-width: 43.75rem) {
+  .insightGrid {
+    grid-template-columns: 1fr;
+  }
+}

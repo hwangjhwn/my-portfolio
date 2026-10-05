@@ -9,9 +9,9 @@
                 <h2 class="articleBody">후불결제(BNPL) 앱 서비스 신규 구축 및 반응형 랜딩페이지 제작</h2>
             </div>
             <div class="btn_wrap">
-                <a href="https://drive.google.com/file/d/1gxcRwu_-YWiI01699TLAqbFgB4itYe1g/view?usp=drive_link" target="_blank">
-                    <p>View Detail</p>
-                </a>
+                <router-link to="/projects/sobeit">
+                    <p>프로젝트 자세히 보기</p>
+                </router-link>
             </div>
         </div>
         <div class="text_wrap" v-fade="{ delay: 150 }">

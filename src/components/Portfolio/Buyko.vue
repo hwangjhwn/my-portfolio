@@ -9,10 +9,9 @@
                 <h2 class="articleBody">일본 타겟 반응형 쇼핑몰 웹사이트 신규 구축</h2>
             </div>
             <div class="btn_wrap">
-                <a href="https://drive.google.com/file/d/1tt4ejBaHscHi_1vjjV3aYCRByJBLXEgr/view?usp=drive_link"
-                    target="_blank">
-                    <p>View Detail</p>
-                </a>
+                <router-link to="/projects/buyko">
+                    <p>프로젝트 자세히 보기</p>
+                </router-link>
             </div>
         </div>
         <div class="text_wrap" v-fade="{ delay: 150 }">

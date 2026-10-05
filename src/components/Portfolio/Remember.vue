@@ -9,10 +9,9 @@
                 <h2 class="articleBody">종합 비즈니스 플랫폼 ‘리멤버’의 신규 서비스 ‘비즈니스 선물하기’</h2>
             </div>
             <div class="btn_wrap">
-                <a href="https://drive.google.com/file/d/1PMJdk8cy7x8GfO2bRikSamo8eJjaBRi6/view?usp=drive_link"
-                    target="_blank">
-                    <p>View Detail</p>
-                </a>
+                <router-link to="/projects/remember">
+                    <p>프로젝트 자세히 보기</p>
+                </router-link>
             </div>
         </div>
         <div class="text_wrap" v-fade="{ delay: 150 }">
