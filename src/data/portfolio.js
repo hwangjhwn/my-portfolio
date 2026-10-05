@@ -39,44 +39,65 @@ export const projects = [
           "alt": "상황과 예산으로 탐색 범위를 좁히기 — 실제 설계 화면",
           "gallery": [
             {
-              "src": "/images/projects/figma/remember-home.png",
+              "src": "/images/projects/remember/home.png",
               "alt": "리멤버 선물하기 홈 화면",
               "caption": "상황별 상품 탐색",
               "annotations": [
                 {
                   "number": "01",
-                  "x": 87,
-                  "y": 27,
+                  "x": 89,
+                  "y": 38,
                   "title": "비즈니스 상황별로 탐색 카테고리 구성",
                   "body": "생일, 이직·승진, 경조사 등 선물 목적에 맞는 상품군으로 바로 진입합니다."
                 },
                 {
                   "number": "02",
-                  "x": 87,
-                  "y": 60,
+                  "x": 89,
+                  "y": 57,
                   "title": "최근 선물 이력으로 반복 탐색 최소화",
                   "body": "최근에 선물한 상품을 다시 확인해 반복되는 탐색을 줄입니다."
                 }
               ]
             },
             {
-              "src": "/images/projects/figma/remember-theme.png",
+              "src": "/images/projects/remember/theme.png",
               "alt": "리멤버 테마별 상품과 가격 필터 화면",
               "caption": "예산에 맞는 후보 구체화",
               "annotations": [
                 {
                   "number": "01",
-                  "x": 87,
-                  "y": 16,
+                  "x": 89,
+                  "y": 19,
                   "title": "선택한 상황에 맞는 상품군으로 탐색 범위 구체화",
                   "body": "업무 상황을 선택하면 해당 목적에 맞는 상품을 모아 보여줍니다."
                 },
                 {
                   "number": "02",
-                  "x": 87,
+                  "x": 89,
                   "y": 34,
                   "title": "가격대 필터로 예산에 맞는 후보 선별",
                   "body": "가격대별로 후보를 좁혀 목적과 예산에 맞는 상품을 비교합니다."
+                }
+              ]
+            },
+            {
+              "src": "/images/projects/remember/product.png",
+              "alt": "리멤버 상품 상세와 가격·배송 정보 화면",
+              "caption": "선택에 필요한 상품 정보 확인",
+              "annotations": [
+                {
+                  "number": "01",
+                  "x": 89,
+                  "y": 61,
+                  "title": "가격·할인 정보를 함께 확인",
+                  "body": "상품명과 할인율, 최종 가격을 모아 구매 판단에 필요한 정보를 제공합니다."
+                },
+                {
+                  "number": "02",
+                  "x": 89,
+                  "y": 82,
+                  "title": "판매자와 배송 조건 확인",
+                  "body": "판매자 정보와 배송비 포함 여부를 확인한 뒤 선물 전달 단계로 이어집니다."
                 }
               ]
             }
@@ -104,20 +125,20 @@ export const projects = [
           "alt": "명함 관계를 선물 전달로 연결하기 — 실제 설계 화면",
           "gallery": [
             {
-              "src": "/images/projects/figma/remember-recipient.png",
+              "src": "/images/projects/remember/recipient.png",
               "alt": "명함첩에서 선물 수신자를 선택하는 화면",
               "caption": "기존 명함 관계에서 수신자 선택",
               "annotations": [
                 {
                   "number": "01",
-                  "x": 87,
-                  "y": 23,
+                  "x": 89,
+                  "y": 24,
                   "title": "직접 입력으로 명함 밖 수신자까지 대응",
                   "body": "명함에 등록되지 않은 대상도 연락처를 직접 입력해 선물할 수 있습니다."
                 },
                 {
                   "number": "02",
-                  "x": 87,
+                  "x": 89,
                   "y": 40,
                   "title": "명함 관계에서 바로 수신자 선택",
                   "body": "기존 명함첩의 관계 정보를 활용해 선물할 대상을 선택합니다."
@@ -131,15 +152,15 @@ export const projects = [
               "annotations": [
                 {
                   "number": "01",
-                  "x": 87,
-                  "y": 31,
+                  "x": 89,
+                  "y": 33,
                   "title": "상황에 맞는 카드 선택",
                   "body": "생일·축하·감사 등 목적에 맞는 카드를 선택합니다."
                 },
                 {
                   "number": "02",
-                  "x": 87,
-                  "y": 83,
+                  "x": 89,
+                  "y": 79,
                   "title": "메시지로 선물의 맥락 전달",
                   "body": "선물과 함께 전달할 메시지를 작성합니다."
                 }
@@ -152,17 +173,17 @@ export const projects = [
               "annotations": [
                 {
                   "number": "01",
-                  "x": 87,
+                  "x": 89,
                   "y": 64,
                   "title": "등록 주소 활용 또는 직접 입력",
                   "body": "명함에 등록된 주소를 활용하거나 직접 입력합니다."
                 },
                 {
                   "number": "02",
-                  "x": 87,
-                  "y": 71,
-                  "title": "받는 사람에게 주소 입력 요청",
-                  "body": "수신자가 직접 배송 정보를 입력하는 방식도 지원합니다."
+                  "x": 89,
+                  "y": 76,
+                  "title": "배송 정보 입력 방식에 맞춘 주소 확인",
+                  "body": "명함 주소 활용, 수신자 입력 요청, 직접 입력 중 상황에 맞는 방식을 선택합니다."
                 }
               ]
             }
@@ -194,15 +215,15 @@ export const projects = [
               "annotations": [
                 {
                   "number": "01",
-                  "x": 87,
-                  "y": 30,
+                  "x": 89,
+                  "y": 35,
                   "title": "리멤버 포인트 적용",
                   "body": "보유 포인트를 결제 금액에 적용합니다."
                 },
                 {
                   "number": "02",
-                  "x": 87,
-                  "y": 51,
+                  "x": 89,
+                  "y": 62,
                   "title": "개인·법인 구매에 맞는 결제",
                   "body": "구매 상황에 맞는 카드 결제를 지원합니다."
                 }
@@ -215,15 +236,15 @@ export const projects = [
               "annotations": [
                 {
                   "number": "01",
-                  "x": 87,
-                  "y": 52,
+                  "x": 89,
+                  "y": 64,
                   "title": "할인·포인트 사용 내역 확인",
                   "body": "주문 금액과 할인, 포인트 사용 내역을 구분합니다."
                 },
                 {
                   "number": "02",
-                  "x": 87,
-                  "y": 86,
+                  "x": 89,
+                  "y": 84,
                   "title": "수신자·배송 정보 최종 확인",
                   "body": "결제 결과와 함께 선물 전달에 필요한 정보를 확인합니다."
                 }
@@ -256,15 +277,15 @@ export const projects = [
               "annotations": [
                 {
                   "number": "01",
-                  "x": 87,
-                  "y": 15,
+                  "x": 89,
+                  "y": 19,
                   "title": "사용 상태로 선물 내역 구분",
                   "body": "사용 가능한 선물과 완료된 선물을 구분합니다."
                 },
                 {
                   "number": "02",
-                  "x": 87,
-                  "y": 32,
+                  "x": 89,
+                  "y": 50,
                   "title": "상대 정보와 선물을 함께 확인",
                   "body": "주고받은 선물에 관계의 맥락을 함께 표시합니다."
                 }
@@ -277,15 +298,15 @@ export const projects = [
               "annotations": [
                 {
                   "number": "01",
-                  "x": 87,
-                  "y": 33,
+                  "x": 89,
+                  "y": 53,
                   "title": "선물과 보낸 사람의 메시지",
                   "body": "받은 상품과 메시지를 같은 흐름에서 확인합니다."
                 },
                 {
                   "number": "02",
-                  "x": 87,
-                  "y": 73,
+                  "x": 89,
+                  "y": 71,
                   "title": "감사 답장과 다시 선물하기",
                   "body": "받은 선물에서 후속 행동으로 이어집니다."
                 }
@@ -298,15 +319,15 @@ export const projects = [
               "annotations": [
                 {
                   "number": "01",
-                  "x": 87,
-                  "y": 28,
+                  "x": 89,
+                  "y": 35,
                   "title": "상황에 맞는 감사 카드",
                   "body": "답장에 사용할 카드를 선택합니다."
                 },
                 {
                   "number": "02",
-                  "x": 87,
-                  "y": 73,
+                  "x": 89,
+                  "y": 77,
                   "title": "감사 메시지 작성",
                   "body": "카드와 메시지로 감사의 마음을 전달합니다."
                 }
@@ -403,7 +424,6 @@ export const projects = [
         {
           "title": "근무 정보를 날짜 단위로 이해하기",
           "body": "출퇴근 기록과 근무 조정 정보가 분산되어 있던 화면을 날짜 단위로 통합했습니다. 하루의 기록과 신청 상태를 함께 파악할 수 있도록 관련 정보를 묶고, 업무 맥락과 중요도에 따라 정보 위계를 재구성했습니다.",
-          "image": "/images/projects/case-page-30.webp",
           "alt": "근무 정보를 날짜 단위로 이해하기 — 실제 설계 화면",
           "points": [
             {
@@ -418,33 +438,229 @@ export const projects = [
               "title": "중요도에 따른 표현",
               "body": "업무 확인에 필요한 주요 정보와 상태를 우선적으로 읽을 수 있도록 정보 밀도와 시각적 강조를 조정했습니다."
             }
+          ],
+          "comparisons": [
+            {
+              "title": "근무 기록",
+              "before": {
+                "src": "/images/projects/hr/record-before.png",
+                "alt": "HRnFLEX As-is · 근무 기록",
+                "caption": "As-is · 근무 기록"
+              },
+              "after": {
+                "src": "/images/projects/hr/record-after.png",
+                "alt": "HRnFLEX To-be · 근무 기록",
+                "caption": "To-be · 근무 기록",
+                "annotations": [
+                  {
+                    "number": "01",
+                    "x": 89,
+                    "y": 50,
+                    "title": "날짜 단위로 기록과 요청 통합",
+                    "body": "같은 날짜의 출퇴근 기록과 휴가·근무 조정 내용을 하나의 카드에서 확인합니다."
+                  },
+                  {
+                    "number": "02",
+                    "x": 89,
+                    "y": 68,
+                    "title": "상태의 의미에 따른 시각적 구분",
+                    "body": "근무 시간은 강조하고, 조정·휴가·지각은 Blue·Yellow·Red 기준으로 구분합니다."
+                  }
+                ]
+              }
+            },
+            {
+              "title": "출퇴근 상세 정보",
+              "before": {
+                "src": "/images/projects/hr/detail-before.png",
+                "alt": "HRnFLEX As-is · 출퇴근 상세 정보",
+                "caption": "As-is · 출퇴근 상세 정보"
+              },
+              "after": {
+                "src": "/images/projects/hr/detail-after.png",
+                "alt": "HRnFLEX To-be · 출퇴근 상세 정보",
+                "caption": "To-be · 출퇴근 상세 정보",
+                "annotations": [
+                  {
+                    "number": "01",
+                    "x": 89,
+                    "y": 31,
+                    "title": "출퇴근 이벤트별 정보 그룹화",
+                    "body": "시간·위치·증빙 사진을 출근과 퇴근 단위로 묶어 관련 정보를 함께 읽도록 했습니다."
+                  },
+                  {
+                    "number": "02",
+                    "x": 89,
+                    "y": 16,
+                    "title": "상세 영역을 Bottom Sheet로 확장",
+                    "body": "목록의 맥락을 유지하면서 상세 정보를 탐색할 수 있는 공간을 확보했습니다."
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": "서로 다른 신청 폼에 하나의 입력 규칙 적용하기",
+          "body": "근무 일정·휴가·사내 요청의 신청 폼에 공통 컴포넌트와 인터랙션 규칙을 적용했습니다. 입력·선택 방식과 Label·Field·Description·Action의 배치 기준을 정리해 화면이 달라져도 입력 흐름을 예측할 수 있도록 했습니다.",
+          "comparisons": [
+            {
+              "title": "근무 신청 입력",
+              "before": {
+                "src": "/images/projects/hr/input-before.png",
+                "alt": "HRnFLEX As-is · 근무 신청 입력",
+                "caption": "As-is · 근무 신청 입력"
+              },
+              "after": {
+                "src": "/images/projects/hr/input-empty.png",
+                "alt": "HRnFLEX To-be · 근무 신청 입력",
+                "caption": "To-be · 근무 신청 입력",
+                "annotations": [
+                  {
+                    "number": "01",
+                    "x": 89,
+                    "y": 28,
+                    "title": "일관된 라벨과 입력 구조",
+                    "body": "라벨·필드·설명의 배치 기준을 통일해 다른 업무 폼에서도 입력 순서를 예측하도록 했습니다."
+                  },
+                  {
+                    "number": "02",
+                    "x": 89,
+                    "y": 86,
+                    "title": "입력 상태에 맞는 행동 표현",
+                    "body": "필수 내용이 입력되기 전에는 제출 버튼을 비활성 상태로 구분합니다."
+                  }
+                ]
+              }
+            },
+            {
+              "title": "사내 구매 요청",
+              "before": {
+                "src": "/images/projects/hr/filing-before.png",
+                "alt": "HRnFLEX As-is · 사내 구매 요청",
+                "caption": "As-is · 사내 구매 요청"
+              },
+              "after": {
+                "src": "/images/projects/hr/filing-after.png",
+                "alt": "HRnFLEX To-be · 사내 구매 요청",
+                "caption": "To-be · 사내 구매 요청",
+                "annotations": [
+                  {
+                    "number": "01",
+                    "x": 89,
+                    "y": 26,
+                    "title": "신청 목적과 안내를 먼저 제공",
+                    "body": "구매 요청의 목적을 제목과 설명으로 정리하고 입력 항목으로 연결했습니다."
+                  },
+                  {
+                    "number": "02",
+                    "x": 89,
+                    "y": 73,
+                    "title": "공통 파일 업로드 패턴 적용",
+                    "body": "파일 선택과 업로드 행동을 하나의 필드로 묶고 용량 조건을 가까이 안내합니다."
+                  }
+                ]
+              }
+            }
+          ],
+          "points": [
+            {
+              "title": "입력·선택 규칙 통일",
+              "body": "동일한 유형의 입력과 선택 행동에 공통 규칙을 적용했습니다."
+            },
+            {
+              "title": "공통 Form 컴포넌트 적용",
+              "body": "Input·Dropdown·Date Picker·File Upload 등 반복되는 요소를 공통 컴포넌트로 정리했습니다."
+            },
+            {
+              "title": "일관된 Form 구조",
+              "body": "라벨·입력 필드·설명·행동의 배치와 간격에 공통 기준을 적용했습니다."
+            }
           ]
         },
         {
           "title": "입력 이후의 행동까지 연결하기",
           "body": "입력 후 바로 제출하던 흐름에 확인 단계를 추가했습니다. 신청 내용을 검토한 뒤 제출하고, 완료 결과에서 요청 현황으로 이동하도록 연결해 신청과 후속 확인을 하나의 업무 흐름으로 구성했습니다.",
-          "image": "/images/projects/case-page-34.webp",
           "alt": "입력 이후의 행동까지 연결하기 — 실제 설계 화면",
           "points": [
             {
-              "title": "입력과 검토를 구분",
-              "body": "사용자가 작성한 내용을 제출 전에 다시 확인할 수 있도록 별도의 검토 단계를 구성했습니다."
+              "title": "제출 전 확인 단계",
+              "body": "입력 내용을 다시 확인하는 단계를 추가해 잘못된 정보가 제출되는 오류를 줄이는 방향으로 설계했습니다."
             },
             {
-              "title": "완료 결과를 명확하게",
-              "body": "제출 이후 신청 완료 상태를 확인하도록 해, 현재 작업이 어디까지 진행됐는지 이해할 수 있도록 했습니다."
+              "title": "요청 현황으로 바로 연결",
+              "body": "신청 완료 후 On Request 목록으로 연결해 제출한 요청과 진행 상태를 바로 확인하도록 했습니다."
+            }
+          ],
+          "screenFlow": [
+            {
+              "src": "/images/projects/hr/input-filled.png",
+              "alt": "HRnFLEX 01 · 신청 내용 입력",
+              "caption": "01 · 신청 내용 입력",
+              "annotations": [
+                {
+                  "number": "01",
+                  "x": 89,
+                  "y": 18,
+                  "title": "승인 설정의 맥락 유지",
+                  "body": "신청 입력 화면에서 승인자·참조자 설정을 확인하고 변경할 수 있도록 했습니다."
+                },
+                {
+                  "number": "02",
+                  "x": 89,
+                  "y": 43,
+                  "title": "신청 내용 작성",
+                  "body": "근무 유형·시작과 종료 시간·위치·사유를 같은 입력 규칙으로 작성합니다."
+                }
+              ]
             },
             {
-              "title": "요청 현황으로 연결",
-              "body": "완료 이후 관련 요청 현황으로 이동할 수 있도록 연결했습니다. 다음 확인 작업을 위해 다시 메뉴를 탐색하는 흐름을 줄이는 방향으로 설계했습니다."
+              "src": "/images/projects/hr/confirm.png",
+              "alt": "HRnFLEX 02 · 제출 전 확인",
+              "caption": "02 · 제출 전 확인",
+              "annotations": [
+                {
+                  "number": "01",
+                  "x": 89,
+                  "y": 49,
+                  "title": "제출 전 입력 내용 재확인",
+                  "body": "유형과 기간, 총 근무 시간, 위치와 사유를 요약해 검토하도록 했습니다."
+                },
+                {
+                  "number": "02",
+                  "x": 89,
+                  "y": 87,
+                  "title": "검토 후 제출 또는 수정",
+                  "body": "취소로 입력 화면에 돌아가거나 확인한 내용을 제출할 수 있습니다."
+                }
+              ]
+            },
+            {
+              "src": "/images/projects/hr/requests.png",
+              "alt": "HRnFLEX 03 · 요청 현황 확인",
+              "caption": "03 · 요청 현황 확인",
+              "annotations": [
+                {
+                  "number": "01",
+                  "x": 89,
+                  "y": 24,
+                  "title": "제출 이후 요청 현황으로 연결",
+                  "body": "신청 완료 후 On Request 목록에서 제출한 요청을 바로 확인하도록 연결했습니다."
+                },
+                {
+                  "number": "02",
+                  "x": 89,
+                  "y": 34,
+                  "title": "요청과 진행 상태 함께 확인",
+                  "body": "신청 일시·유형·기간과 상태를 같은 항목에서 확인합니다."
+                }
+              ]
             }
           ]
         },
         {
-          "title": "재사용 가능한 공통 UI 기준 만들기",
-          "body": "근무 일정·휴가·사내 요청처럼 유사한 신청 폼에 공통 컴포넌트와 인터랙션 규칙을 적용했습니다. 리디자인 과정에서 반복되는 버튼과 입력 패턴을 정의하고, 상태와 사용 규칙을 제품 전반에 적용할 수 있는 기반으로 정리했습니다.",
-          "image": "/images/projects/case-page-35.webp",
-          "alt": "재사용 가능한 공통 UI 기준 만들기 — 실제 설계 화면",
+          "title": "재사용 가능한 컴포넌트와 사용 규칙 정립하기",
+          "body": "리디자인 과정에서 반복되는 UI 패턴을 공통 컴포넌트로 정의했습니다. 버튼의 역할과 크기, 입력 상태와 피드백, 목적별 입력 패턴을 체계화해 제품 전반에 일관되게 적용할 수 있는 기준을 마련했습니다.",
           "points": [
             {
               "title": "버튼의 역할과 중요도",
@@ -455,8 +671,28 @@ export const projects = [
               "body": "Placeholder·Active·Filled·Alert·Disabled 등 입력 상태와 오류 메시지 기준을 정리해 입력 상황을 예측 가능하게 표현했습니다."
             },
             {
-              "title": "다양한 폼에 공통 패턴 적용",
-              "body": "선택·파일·검색·비밀번호·날짜 입력 등 목적별 패턴을 구성했습니다. 서로 다른 업무 폼에서도 같은 입력 규칙을 사용할 수 있도록 했습니다."
+              "title": "목적별 입력 패턴",
+              "body": "선택·파일·검색·비밀번호·날짜 입력에 대응하는 공통 Form 패턴을 구성했습니다."
+            }
+          ],
+          "guideGallery": [
+            {
+              "src": "/images/projects/hr/button.png",
+              "alt": "Primary·Secondary·Disabled·Danger 버튼 유형과 크기",
+              "caption": "Button Variants · 역할과 크기",
+              "body": "Primary·Secondary·Danger로 행동의 역할과 중요도를 구분하고, 크기와 Disabled 상태를 공통 기준으로 정의했습니다."
+            },
+            {
+              "src": "/images/projects/hr/input.png",
+              "alt": "Placeholder·Active·Filled·Alert·Disabled 입력 상태",
+              "caption": "Input States · 상태와 피드백",
+              "body": "Placeholder·Active·Filled·Alert·Disabled 상태와 오류 피드백을 정리해 현재 입력 상황을 명확하게 표현했습니다."
+            },
+            {
+              "src": "/images/projects/hr/input2.png",
+              "alt": "Select·File·Search·Password·Date Picker 입력 패턴",
+              "caption": "Input Patterns · 목적별 입력",
+              "body": "Select·File·Search·Password·Date Picker를 공통 패턴으로 구성해 서로 다른 업무 화면에서도 같은 조작 규칙을 적용했습니다."
             }
           ]
         }

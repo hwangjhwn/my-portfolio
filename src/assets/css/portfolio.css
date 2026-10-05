@@ -1184,10 +1184,10 @@ h2 {
 /* 리멤버: PC에서는 원본의 화면 옆 주석, 모바일에서는 번호로 연결합니다. */
 .annotatedGallery {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 4.8rem;
-  padding: 4rem 2.4rem;
-  border: 0.1rem solid var(--line);
+  grid-template-columns: repeat(2, minmax(0, calc((100% - 6.4rem) / 3)));
+  justify-content: center;
+  gap: 3.2rem;
+  padding: 3.2rem 0;
   background: var(--wash);
 }
 .designSection .annotatedScreen {
@@ -1203,6 +1203,7 @@ h2 {
 .annotatedScreen_stage img {
   width: 100%;
   height: auto;
+  background: transparent;
 }
 .desktopAnnotation {
   position: absolute;
@@ -1226,9 +1227,10 @@ h2 {
 }
 .designSection .annotatedScreen figcaption {
   display: block;
-  margin-top: 1.8rem;
+  width: 58%;
+  margin-top: 0.6rem;
   font-size: 1.3rem;
-  text-align: left;
+  text-align: center;
   color: var(--ink);
 }
 .screenMarker {
@@ -1245,9 +1247,12 @@ h2 {
   .annotatedGallery {
     grid-template-columns: 1fr;
     gap: 4rem;
-    padding: 3.2rem;
+    padding: 2.4rem 0;
   }
   .annotatedScreen_stage {
+    width: min(32rem, 55%);
+  }
+  .designSection .annotatedScreen figcaption {
     width: min(32rem, 55%);
   }
   .desktopAnnotation {
@@ -1266,7 +1271,7 @@ h2 {
   .annotatedGallery {
     grid-template-columns: 1fr;
     gap: 4rem;
-    padding: 2.4rem 1.8rem;
+    padding: 2.4rem 0;
   }
   .annotatedScreen_stage {
     width: min(32rem, 100%);
@@ -1292,7 +1297,8 @@ h2 {
     pointer-events: none;
   }
   .designSection .annotatedScreen figcaption {
-    margin-top: 1.2rem;
+    width: min(32rem, 100%);
+    margin: 0.6rem auto 0;
     text-align: center;
   }
   .screenNotes {
@@ -1598,4 +1604,139 @@ textarea {
   .insightGrid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Project detail: compact reading rhythm across all projects. */
+.detail_container p,
+.detail_container small,
+.detailMeta dd {
+  line-height: 1.55;
+}
+.detail_container .desktopAnnotation p,
+.detail_container .screenNotes p {
+  line-height: 1.45;
+}
+.detail_container .designSection h3,
+.detail_container .screenNotes h4 {
+  line-height: 1.35;
+}
+
+/* HR redesign: compare the previous experience with the revised direction. */
+.hrComparison {
+  padding: 3.2rem;
+  background: var(--wash);
+}
+.hrComparison_grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 4rem minmax(0, 1fr);
+  align-items: center;
+  gap: 2.4rem;
+}
+.hrComparison_side { min-width: 0; }
+.hrComparison_side h4 {
+  margin-block: 1rem 0.8rem;
+  font-size: 1.8rem;
+  line-height: 1.35;
+}
+.hrComparison_side > p:last-child {
+  color: var(--muted);
+  font-size: 1.4rem;
+}
+.hrComparison_side.isAfter .eyebrow { color: var(--accent); }
+.hrComparison_arrow {
+  color: var(--accent);
+  font-size: 2.4rem;
+  text-align: center;
+}
+.designSection .hrScreenOverview {
+  padding: 3.2rem;
+  border: 0;
+  background: var(--wash);
+}
+.hrComparison + .hrScreenOverview { padding-top: 0; }
+.designSection .hrScreenOverview img {
+  display: block;
+  background: transparent;
+}
+.designSection .hrScreenOverview figcaption {
+  display: block;
+  margin-top: 0.6rem;
+  text-align: center;
+}
+.designSection .hrScreenOverview figcaption span { display: none; }
+@media (max-width: 43.75rem) {
+  .hrComparison,
+  .designSection .hrScreenOverview { padding: 2.4rem 1.8rem; }
+  .hrComparison_grid { grid-template-columns: 1fr; gap: 1.6rem; }
+  .hrComparison_arrow { transform: rotate(90deg); }
+  .hrComparison + .hrScreenOverview { padding-top: 0; }
+}
+
+.hrImageContainer { padding: 3.2rem; background: var(--wash); }
+.hrImagePair + .hrImagePair { margin-top: 3.2rem; }
+.hrImagePair > h4 { margin-bottom: 1.6rem; font-size: 1.8rem; }
+.hrImagePair_grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3.2rem; max-width: 70rem; margin-inline: auto; }
+.designSection .hrImageScreen { padding: 0; border: 0; background: transparent; min-width: 0; }
+.hrImageScreen .eyebrow { text-align: center; margin-bottom: 0.8rem; }
+.hrImageScreen .isAfter { color: var(--accent); }
+.designSection .hrImageScreen img { display: block; height: 52rem; object-fit: contain; background: transparent; }
+.designSection .hrImageScreen figcaption { display: block; margin-top: 0.6rem; text-align: center; font-size: 1.3rem; }
+.hrScreenFlow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3.2rem; margin-top: 3.2rem; padding-top: 3.2rem; border-top: 0.1rem solid var(--line); }
+@media (max-width: 43.75rem) {
+  .hrImageContainer { padding: 2.4rem 1.8rem; }
+  .hrImagePair_grid { gap: 1.2rem; }
+  .designSection .hrImageScreen img { height: auto; width: 100%; }
+  .hrScreenFlow { grid-template-columns: 1fr; }
+  .hrScreenFlow .hrImageScreen { width: min(28rem, 100%); margin-inline: auto; }
+}
+
+.hrScreenFlow.standalone { margin-top: 0; padding-top: 0; border-top: 0; }
+
+.hrGuideGallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3.2rem; padding: 3.2rem; background: var(--wash); }
+.designSection .hrGuideGallery figure { padding: 0; border: 0; background: transparent; }
+.designSection .hrGuideGallery img { height: 28rem; object-fit: contain; background: transparent; }
+.designSection .hrGuideGallery figcaption { display: block; margin-top: 0.6rem; text-align: center; font-size: 1.3rem; }
+@media (max-width: 43.75rem) {
+  .hrGuideGallery { grid-template-columns: 1fr; padding: 2.4rem 1.8rem; }
+  .designSection .hrGuideGallery img { height: auto; max-height: 36rem; }
+}
+
+/* HR screen explanations follow the shared annotated-screen pattern. */
+.hrImagePair_grid { max-width: none; }
+.hrComparisonScreen { min-width: 0; }
+.hrComparisonScreen > .eyebrow { margin-bottom: 0.8rem; }
+.hrComparisonScreen > .isAfter { color: var(--accent); }
+.hrComparisonScreen .hrImageScreen { width: 58%; }
+.designSection .hrComparisonScreen .hrImageScreen img { height: auto; }
+.hrGuideDescription { margin-top: 1.2rem; font-size: 1.4rem; color: var(--muted); }
+@media (min-width: 43.8125rem) and (max-width: 68.75rem) {
+  .hrImagePair_grid, .hrScreenFlow { grid-template-columns: 1fr; }
+  .hrComparisonScreen .hrImageScreen { width: min(32rem, 55%); }
+}
+@media (max-width: 43.75rem) {
+  .hrImagePair_grid { grid-template-columns: 1fr; gap: 2.4rem; }
+  .hrComparisonScreen > .eyebrow { text-align: center; }
+  .hrComparisonScreen .hrImageScreen { width: min(32rem, 100%); margin-inline: auto; }
+  .hrScreenFlow .annotatedScreen { width: 100%; }
+}
+
+/* Give the redesigned HR screen visual priority over the previous screen. */
+.hrImagePair_grid {
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+}
+.hrComparisonScreen .hrImageScreen {
+  width: 52%;
+  margin-inline: auto;
+}
+.hrComparisonScreen > .eyebrow:not(.isAfter) {
+  text-align: center;
+  color: var(--muted);
+}
+@media (min-width: 43.8125rem) and (max-width: 68.75rem) {
+  .hrImagePair_grid { grid-template-columns: 1fr; }
+  .hrComparisonScreen .hrImageScreen { width: min(24rem, 42%); margin-inline: 0; }
+}
+@media (max-width: 43.75rem) {
+  .hrImagePair_grid { grid-template-columns: 1fr; }
+  .hrComparisonScreen .hrImageScreen { width: min(24rem, 75%); }
 }
